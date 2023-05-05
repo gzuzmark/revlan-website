@@ -122,6 +122,16 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
     }
   }
   customElements.define("menu-button", MenuButton);
+
+  /** Kevin powell suggestion */
+  const navigation = document.querySelector("nav");
+
+  const navigationHeight = navigation?.offsetHeight;
+
+  document.documentElement.style.setProperty(
+    "--scroll-padding",
+    navigationHeight + "px"
+  );
 </script>
 
 <style>
@@ -130,7 +140,7 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
     position: relative;
     font-family: var(--font-brand);
     font-weight: 500;
-    margin-bottom: 3.5rem;
+    margin-bottom: 0rem;
   }
 
   .menu-header {
@@ -255,7 +265,6 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
       align-items: center;
       padding: 2.5rem 5rem 0 2.5rem;
       gap: 1rem;
-      position: sticky;
     }
 
     .menu-header {

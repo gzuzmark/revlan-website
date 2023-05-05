@@ -33,67 +33,28 @@ const { title, description } = Astro.props;
         addEventListener("load", () =>
           document.documentElement.classList.add("loaded")
         );
-        console.log("afterload");
-        // Select all menu links
-        const menuLinks = document.querySelectorAll("nav a");
+        const body = document.querySelector("body");
+        const page = document.body;
+        const header = document.querySelector("nav") as HTMLElement;
+        page.addEventListener("scroll", function () {
+          let nav = document.getElementById("nav");
+          let firstSection = document.getElementById("howitworks");
+          let firstSectionPosition = firstSection?.getBoundingClientRect().top;
+          console.log(
+            "🚀 ~ file: BaseLayout.astro:42 ~ firstSectionPosition:",
+            firstSectionPosition
+          );
+          let scrollTop =
+            document.documentElement.scrollTop || document.body.scrollTop;
+          console.log("🚀 ~ file: BaseLayout.astro:43 ~ scrollTop:", scrollTop);
 
-        // Add click event listener to each menu link
-        // Add click event listener to each menu link
-        menuLinks.forEach((link) => {
-          link.addEventListener("click", (event) => {
-            event.preventDefault(); // Prevent default link behavior
-
-            // Get the target section element
-            const targetHref = event.target.getAttribute("href");
-            const targetSection = document.querySelector(targetHref);
-
-            // Scroll to the target section smoothly
-            targetSection.scrollIntoView({ behavior: "smooth" });
-
-            // Update the URL path without causing a full page reload
-            history.pushState(null, "", targetHref);
-          });
+          if (firstSectionPosition - scrollTop < 0) {
+            header!.style.position = "sticky";
+            header!.style.top = "0";
+          } else {
+            header!.style.position = "static";
+          }
         });
-
-        const sections = document.querySelectorAll("section");
-        const navLi = document.querySelectorAll("nav a");
-
-        const dataAnchors = document.querySelectorAll("[data-anchor]");
-        const menuLinksHelper = document.querySelectorAll(".nav-items a");
-        function updateActiveClass() {
-          let current = "";
-          console.log("HIII");
-          sections.forEach((section) => {
-            const sectionTop = section.offsetTop;
-            if (scrollY >= sectionTop) {
-              current = section.getAttribute("id");
-            }
-          });
-
-          navLi.forEach((li) => {
-            li.classList.remove("active");
-            if (li.getAttribute("href").slice(1) === current) {
-              li.classList.add("active");
-            }
-          });
-
-          let currentSection = "";
-          dataAnchors.forEach((section) => {
-            const sectionTop = section.offsetTop;
-            if (window.pageYOffset >= sectionTop) {
-              currentSection = section.getAttribute("data-anchor");
-            }
-          });
-
-          menuLinksHelper.forEach((link) => {
-            link.classList.remove("active");
-            if (link.getAttribute("data-anchor") === currentSection) {
-              link.classList.add("active");
-            }
-          });
-        }
-        console.log("event Listener");
-        window.addEventListener("scroll", updateActiveClass);
       });
     </script>
 
@@ -153,11 +114,6 @@ const { title, description } = Astro.props;
           --bg-image-subtle-2: url("/assets/backgrounds/bg-subtle-2-dark-1440w.jpg");
           --bg-image-footer: url("/assets/backgrounds/bg-footer-dark-1440w.jpg");
         }
-      }
-
-      hmtl {
-        scroll-behavior: smooth;
-        scroll-padding-top: var(--scroll-padding, 100px);
       }
 
       .backgrounds {

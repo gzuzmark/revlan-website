@@ -192,6 +192,8 @@
 	body {
 		height: 100%;
 		overflow-x: hidden;
+		scroll-behavior: smooth;
+      	scroll-padding-top: var(--scroll-padding, 5rem);
 	}
 
 	body {
