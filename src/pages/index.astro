@@ -18,11 +18,13 @@ import heroImage from "../../public/assets/hero-image.png";
 // Page section components
 import ContactCTA from "../components/ContactCTA.astro";
 import Skills from "../components/Skills.astro";
-import Features from "@components/Features.astro";
-import Programs from "@components/Programs.astro";
-import AboutUs from "@components/AboutUs.astro";
-import BookNow from "@components/BookNow.astro";
-import ContactUs from "@components/ContactUs.astro";
+import Programs from "@components/Programs.section.astro";
+import Features from "@components/Features.section.astro";
+import AboutUs from "@components/AboutUs.section.astro";
+import BookNow from "@components/BookNow.section.astro";
+import ContactUs from "@components/ContactUs.section.astro";
+import SocialProof from "@components/SocialProof.section.astro";
+import Pricing from "@components/Pricing.section.astro";
 
 // Content Fetching: List four most recent work projects
 const projects = (await getCollection("work"))
@@ -83,6 +85,8 @@ const projects = (await getCollection("work"))
       <Features />
       <Programs />
       <AboutUs />
+      <SocialProof />
+      <Pricing />
       <BookNow />
       <ContactUs />
     </main>
