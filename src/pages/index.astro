@@ -35,7 +35,7 @@ const projects = (await getCollection("work"))
 
 <BaseLayout>
   <div class="stack gap-20 lg:gap-48">
-    <header class="wrapper stack gap-8 lg:gap-20">
+    <header class="wrapper stack gap-8 lg:gap-20 -mb-20 lg:-mb-48">
       <header class="hero">
         <Hero
           title="Experience the power of Edutainment with REVLAN"
@@ -78,8 +78,8 @@ const projects = (await getCollection("work"))
 
       <!-- <Skills /> -->
     </header>
-
-    <main class="stack gap-20 lg:gap-48">
+    <div class="spacer layer1"></div>
+    <main class="stack gap-20 lg:gap-48 -mt-20 lg:-mt-80">
       <Features />
       <Programs />
       <AboutUs />
@@ -133,6 +133,18 @@ const projects = (await getCollection("work"))
     position: absolute;
     left: -8%;
     top: -12%;
+  }
+
+  .spacer {
+    aspect-ratio: 960/300;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .layer1 {
+    background-image: url("/assets/feature-layer.svg");
   }
 
   @media (min-width: 769px) {
