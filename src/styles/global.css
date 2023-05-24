@@ -79,6 +79,7 @@
 		/*Color Palette with hsl*/
 		--background: 0 0% 100%;
 		--foreground: 222.2 47.4% 11.2%;
+		--background-secondary: 0, 56%, 96%;
 	
 		--muted: 210 40% 96.1%;
 		--muted-foreground: 215.4 16.3% 46.9%;
@@ -112,7 +113,7 @@
 
 	.dark {
 		--background: 224 71% 4%;
-		--foreground: 213 31% 91%;
+		--foreground: 213 31% 91%;		
 	 
 		--muted: 223 47% 11%;
 		--muted-foreground: 215.4 16.3% 56.9%;
@@ -163,7 +164,7 @@
 		--accent-dark: #c561f6;
 		--accent-overlay: hsla(280, 89%, 67%, 0.33);
 		--accent-subtle-overlay: hsla(281, 81%, 36%, 0.33);
-		--accent-text-over: var(--gray-0);
+		--accent-text-over: var(--gray-0);		
 
 		--link-color: var(--accent-dark);
 

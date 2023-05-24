@@ -33,20 +33,19 @@ const { title, description } = Astro.props;
         addEventListener("load", () =>
           document.documentElement.classList.add("loaded")
         );
+        const sections = document.querySelectorAll("[data-anchor]");
+
         const body = document.querySelector("body");
         const page = document.body;
         const header = document.querySelector("nav") as HTMLElement;
+
         page.addEventListener("scroll", function () {
           let nav = document.getElementById("nav");
           let firstSection = document.getElementById("howitworks");
           let firstSectionPosition = firstSection?.getBoundingClientRect().top;
-          console.log(
-            "🚀 ~ file: BaseLayout.astro:42 ~ firstSectionPosition:",
-            firstSectionPosition
-          );
+
           let scrollTop =
             document.documentElement.scrollTop || document.body.scrollTop;
-          console.log("🚀 ~ file: BaseLayout.astro:43 ~ scrollTop:", scrollTop);
 
           if (firstSectionPosition - scrollTop < 0) {
             header!.style.position = "sticky";

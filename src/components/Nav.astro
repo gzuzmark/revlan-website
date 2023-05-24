@@ -5,11 +5,11 @@ import logo from "../../public/assets/revlan-logo.svg";
 
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
-  { label: "How it works", href: "#howitworks" },
-  { label: "About Us", href: "#about" },
-  { label: "Programs", href: "#programs" },
-  { label: "Book now", href: "#book" },
-  { label: "Contact US", href: "#contact" },
+  { label: "How it works", href: "howitworks" },
+  { label: "About Us", href: "about" },
+  { label: "Programs", href: "programs" },
+  { label: "Book now", href: "book" },
+  { label: "Contact US", href: "contact" },
 ];
 
 /** Icon links to social media — edit these with links to your profiles! */
@@ -62,7 +62,7 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
                       (href !== "/" && Astro.url.pathname.startsWith(href)),
                   },
                 ]}
-                href={href}
+                href={"#" + href}
                 data-anchor={href}>
                 {label}
               </a>
@@ -207,6 +207,12 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
     padding: 2rem;
     background-color: var(--gray-999);
     border-bottom: 1px solid var(--gray-800);
+  }
+
+  .link:target {
+    /* Add your active class styles here */
+    color: var(--accent-text-over);
+    background-color: var(--accent-regular);
   }
 
   .link {
