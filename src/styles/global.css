@@ -109,6 +109,21 @@
 		--ring: 215 20.2% 65.1%;
 	
 		--radius: 0.5rem;
+
+		--background-purple-light: 0, 0%, 100%, 1;
+
+
+		--icon-brackgroud-red: 347, 100%, 62%, 0.1;
+		--icon-brackgroud-blue: 186, 88%, 57%, 0.1;
+		--icon-brackgroud-purple: 280, 87%, 38%, 0.1;
+
+		--icon-red: 347, 100%, 62%, 1;
+		--icon-blue: 186, 88%, 57%, 1;
+		--icon-purple: 280, 87%, 38%, 1;
+
+		--icon-border-red: 347, 100%, 62%, 0.3;
+		--icon-border-blue: 186, 88%, 57%, 0.3;
+		--icon-border-pruple: 280, 87%, 38%, 0.3;
 	}
 
 	.dark {

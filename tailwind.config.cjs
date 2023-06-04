@@ -22,6 +22,18 @@ module.exports = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         bgsecondary: "hsl(var(--background-secondary))",
+        red: {
+          DEFAULT: "hsl(var(--icon-red))",
+          light: "hsl(var(--icon-brackgroud-red))",
+        },
+        blue: {
+          DEFAULT: "hsl(var(--icon-blue))",
+          light: "hsl(var(--icon-brackgroud-blue))",
+        },
+        purple: {
+          DEFAULT: "hsl(var(--icon-purple))",
+          light: "hsl(var(--icon-brackgroud-purple))",
+        },
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -50,6 +62,16 @@ module.exports = {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+        },
+        icon: {
+          red: "hsl(var(--icon-red))",
+          blue: "hsl(var(--icon-blue))",
+          purple: "hsl(var(--icon-purple))",
+          opacity: {
+            red: "hsl(var(--icon-border-red))",
+            blue: "hsl(var(--icon-border-blue))",
+            purple: "hsl(var(--icon-border-purple))",
+          },
         },
       },
       borderRadius: {

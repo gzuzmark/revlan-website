@@ -1,4 +1,4 @@
-<section id="book" class="text-gray-600 body-font">
+<section id="book" class="text-gray-600 body-font with-background">
   <div
     class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
     <div
@@ -34,3 +34,33 @@
     </div>
   </div>
 </section>
+
+<style>
+  .with-background {
+    position: relative;
+  }
+
+  .with-background::before {
+    --hero-bg: var(--bg-image-secondary-rainbow);
+
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    left: 50%;
+    width: 100vw;
+    transform: scale(0.9);
+    aspect-ratio: calc(1.5 / var(--bg-scale));
+    top: 0;
+    transform: translateY(-25%) translateX(-50%);
+    background: url("/assets/backgrounds/noise.png") top center/220px repeat,
+      var(--hero-bg) center center / var(--bg-gradient-size) no-repeat,
+      var(--gray-999);
+    background-blend-mode: overlay, normal, normal, normal;
+    mix-blend-mode: var(--bg-blend-mode);
+    z-index: -1;
+  }
+
+  .with-background.bg-variant::before {
+    --hero-bg: var(--bg-image-secondary-rainbow);
+  }
+</style>
