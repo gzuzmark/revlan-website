@@ -1,6 +1,6 @@
 ---
 interface Props {
-  href: string;
+  href?: string;
   size?: "md" | "lg";
   block?: boolean;
   style?: "outline" | "primary" | "inverted" | "muted" | "secondary";
@@ -32,17 +32,26 @@ const styles = {
   secondary:
     "bg-purple text-white hover:bg-purple-light hover:text-black border-2 border-transparent",
 };
+
+const baseClasses = [
+  "rounded-md text-center text-xl transition focus-visible:ring-2 ring-offset-2 ring-gray-200",
+  block && "w-full",
+  sizes[size],
+  styles[style],
+  className,
+];
 ---
 
-<a
-  href={href}
-  {...rest}
-  class:list={[
-    "rounded-md text-center text-xl transition focus-visible:ring-2 ring-offset-2 ring-gray-200",
-    block && "w-full",
-    sizes[size],
-    styles[style],
-    className,
-  ]}
-  ><slot />
-</a>
+<astro-fragment>
+  {
+    href ? (
+      <a href={href} {...rest} class:list={baseClasses}>
+        <slot />
+      </a>
+    ) : (
+      <button {...rest} class:list={baseClasses}>
+        <slot />
+      </button>
+    )
+  }
+</astro-fragment>

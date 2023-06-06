@@ -18,10 +18,11 @@ import Icon from "./Icon.astro";
       </p>
       <div
         class="flex mx-auto border-2 border-purple rounded overflow-hidden mt-6">
-        <button class="py-1 px-4 bg-purple text-white focus:outline-none"
-          >USD</button
+        <button
+          id="btn-usd"
+          class="py-1 px-4 bg-purple text-white focus:outline-none">USD</button
         >
-        <button class="py-1 px-4 focus:outline-none">PEN</button>
+        <button id="btn-pen" class="py-1 px-4 focus:outline-none">PEN</button>
       </div>
     </div>
     <div class="flex flex-wrap -m-4 justify-center mb-5">
@@ -29,7 +30,7 @@ import Icon from "./Icon.astro";
         <div
           class="h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden">
           <h1
-            class="text-5xl text-gray-900 leading-none flex items-center pb-4">
+            class="price text-5xl text-gray-900 leading-none flex items-center pb-4">
             <span>$7</span>
             <span class="text-lg ml-1 font-normal text-gray-500"
               >/per child</span
@@ -90,7 +91,7 @@ import Icon from "./Icon.astro";
         <div
           class="h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden">
           <h1
-            class="text-5xl text-gray-900 leading-none flex items-center pb-4">
+            class="price text-5xl text-gray-900 leading-none flex items-center pb-4">
             <span>$18</span>
             <span class="text-lg ml-1 font-normal text-gray-500"
               >/per child</span
@@ -156,9 +157,11 @@ import Icon from "./Icon.astro";
           >
 
           <h1
-            class="text-5xl text-gray-900 leading-none flex items-center pb-4">
+            class="price text-5xl text-gray-900 leading-none flex items-center pb-4">
             <span>$40</span>
-            <span class="text-lg ml-1 font-normal text-gray-500">/mo</span>
+            <span class="text-lg ml-1 font-normal text-gray-500"
+              >/per child</span
+            >
           </h1>
           <h2
             class="text-sm tracking-widest title-font mb-1 font-medium border-b border-gray-200">
@@ -240,3 +243,43 @@ import Icon from "./Icon.astro";
     </div>
   </div>
 </section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const btnUsd = document.getElementById("btn-usd");
+    const btnPen = document.getElementById("btn-pen");
+    const priceElements = document.getElementsByClassName("price");
+
+    const updatePrices = (currency) => {
+      const usdPrices = [7, 18, 40];
+      const exchangeRate = 3.7;
+
+      for (let i = 0; i < priceElements.length; i++) {
+        const newPrice =
+          currency === "USD"
+            ? { symbol: "$", value: usdPrices[i] }
+            : { symbol: "S/", value: usdPrices[i] * exchangeRate };
+
+        priceElements[i].querySelector("span").textContent = `${
+          newPrice.symbol
+        }${newPrice.value.toFixed(2)}`;
+      }
+    };
+
+    const toggleButtonClasses = (activeButton) => {
+      btnUsd.classList.remove("bg-purple", "text-white");
+      btnPen.classList.remove("bg-purple", "text-white");
+      activeButton.classList.add("bg-purple", "text-white");
+    };
+
+    btnUsd.addEventListener("click", () => {
+      updatePrices("USD");
+      toggleButtonClasses(btnUsd);
+    });
+
+    btnPen.addEventListener("click", () => {
+      updatePrices("PEN");
+      toggleButtonClasses(btnPen);
+    });
+  });
+</script>
