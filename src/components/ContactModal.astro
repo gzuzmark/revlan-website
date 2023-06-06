@@ -1,0 +1,42 @@
+<!-- ---
+import ContactForm from "./ContactForm.astro"
+---
+
+<div
+  id="searchModal"
+  class="hidden absolute top-0 left-0 w-full h-full grid justify-center content-center pointer-events-none"
+>
+  <div
+    class="modal__backdrop absolute top-0 left-0 w-full h-screen opacity-50 bg-gradient-to-tr from-white to-violet-300 z-0 md:text-5xl"
+  ></div>
+  <div class="modal__cnt w-full z-10 pointer-events-auto">
+    <ContactForm />
+  </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchModal = document.getElementById('searchModal');
+  
+      const dismissModal = () => {
+        searchModal.classList.add('hidden');
+      };
+  
+      const handleEsc = (event) => {
+        if (event.key === 'Escape') {
+          dismissModal();
+        }
+      };
+  
+      // Add event listeners for click and keydown events
+      searchModal
+        .querySelector('.modal__backdrop')
+        .addEventListener('click', dismissModal);
+      document.addEventListener('keydown', handleEsc);
+  
+      // Export a function to toggle the modal visibility
+      export function toggleModal() {
+        searchModal.classList.toggle('hidden');
+      }
+    });
+  </script>
+   -->

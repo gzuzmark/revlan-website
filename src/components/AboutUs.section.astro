@@ -1,6 +1,7 @@
 ---
 import Icon from "./Icon.astro";
 import Link from "./ui/LinkOrButton.astro";
+import ContactBtn from "./ContactBtn.svelte";
 ---
 
 <section id="about" class="text-gray-600 body-font">
@@ -29,14 +30,7 @@ import Link from "./ui/LinkOrButton.astro";
         achieve success.
       </p>
       <div class="flex justify-center">
-        <Link
-          href="#"
-          target="_blank"
-          class="flex gap-1 items-center justify-center"
-          rel="noopener">
-          Contact us now!
-          <Icon icon="paper-plane" size="1.2em" />
-        </Link>
+        <ContactBtn client:visible />
       </div>
     </div>
   </div>
