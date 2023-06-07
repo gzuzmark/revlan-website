@@ -56,7 +56,7 @@ const projects = (await getCollection("work"))
               style="outline"
               href="#"
               target="_blank"
-              class="flex gap-1 items-center justify-center"
+              class="gap-1 items-center justify-center hidden md:flex"
               rel="noopener">
               Watch video
               <Icon icon="video-camera" size="1.2em" />
@@ -80,8 +80,8 @@ const projects = (await getCollection("work"))
 
       <!-- <Skills /> -->
     </header>
-    <div class="spacer layer1 -mb-5"></div>
-    <main class="stack -mt-36 lg:-mt-80">
+    <div class="spacer layer1 mt-28 xl:-mt-4 lg:mt-5 md:mt-28"></div>
+    <main class="stack -mt-28 lg:-mt-80">
       <Features />
       <Programs />
       <AboutUs />
@@ -100,10 +100,10 @@ const projects = (await getCollection("work"))
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: 3.5rem;
   }
 
-  .roles {
+  .secondary-button {
     display: none;
   }
 
@@ -168,7 +168,7 @@ const projects = (await getCollection("work"))
     /* 800px if fontsize base is 16px */
     .hero {
       display: grid;
-      grid-template-columns: 6fr 4fr;
+      grid-template-columns: 9fr 4fr;
       padding-inline: 2.5rem;
       gap: 3.75rem;
     }
@@ -177,12 +177,45 @@ const projects = (await getCollection("work"))
       margin-top: 0.5rem;
       display: flex;
       gap: 0.5rem;
+      font-size: var(--step-0);
     }
 
     .hero img {
       aspect-ratio: auto;
       border-radius: 4.5rem;
       object-fit: cover;
+    }
+
+    .section {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-areas: "header header header header" "gallery gallery gallery gallery";
+      gap: 5rem;
+    }
+
+    .section.with-cta {
+      grid-template-areas: "header header header cta" "gallery gallery gallery gallery";
+    }
+
+    .section-header {
+      grid-area: header;
+      font-size: var(--text-lg);
+    }
+
+    .section-header h3 {
+      font-size: var(--text-4xl);
+    }
+
+    .with-cta .section-header {
+      justify-self: flex-start;
+      text-align: left;
+    }
+
+    .gallery {
+      grid-area: gallery;
+    }
+
+    .cta {
+      grid-area: cta;
     }
   }
 
@@ -230,40 +263,6 @@ const projects = (await getCollection("work"))
 
   .section-header h3 {
     font-size: var(--text-2xl);
-  }
-
-  @media (min-width: 50em) {
-    .section {
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-areas: "header header header header" "gallery gallery gallery gallery";
-      gap: 5rem;
-    }
-
-    .section.with-cta {
-      grid-template-areas: "header header header cta" "gallery gallery gallery gallery";
-    }
-
-    .section-header {
-      grid-area: header;
-      font-size: var(--text-lg);
-    }
-
-    .section-header h3 {
-      font-size: var(--text-4xl);
-    }
-
-    .with-cta .section-header {
-      justify-self: flex-start;
-      text-align: left;
-    }
-
-    .gallery {
-      grid-area: gallery;
-    }
-
-    .cta {
-      grid-area: cta;
-    }
   }
 
   /* ====================================================== */

@@ -124,6 +124,17 @@
 		--icon-border-red: 347, 100%, 62%, 0.3;
 		--icon-border-blue: 186, 88%, 57%, 0.3;
 		--icon-border-pruple: 280, 87%, 38%, 0.3;
+
+		/*Calculated font size with https://utopia.fyi/ calculator*/
+
+		--step--2: clamp(0.69rem, calc(0.35rem + 1.72vw), 2.00rem);
+		--step--1: clamp(0.83rem, calc(0.39rem + 2.19vw), 2.50rem);
+		--step-0: clamp(1.00rem, calc(0.44rem + 2.80vw), 3.13rem);
+		--step-1: clamp(1.20rem, calc(0.49rem + 3.56vw), 3.91rem);
+		--step-2: clamp(1.44rem, calc(0.53rem + 4.53vw), 4.88rem);
+		--step-3: clamp(1.73rem, calc(0.58rem + 5.76vw), 6.10rem);
+		--step-4: clamp(2.07rem, calc(0.61rem + 7.31vw), 7.63rem);
+		--step-5: clamp(2.49rem, calc(0.63rem + 9.27vw), 9.54rem);
 	}
 
 	.dark {

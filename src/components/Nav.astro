@@ -2,6 +2,7 @@
 import Icon, { Props as IconProps } from "./Icon.astro";
 import ThemeToggle from "./ThemeToggle.astro";
 import logo from "../../public/assets/revlan-logo.svg";
+import LinkOrButton from "./ui/LinkOrButton.astro";
 
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
@@ -10,7 +11,6 @@ const textLinks: { label: string; href: string }[] = [
   { label: "Programs", href: "programs" },
   { label: "Book now", href: "book" },
   { label: "Pricing", href: "pricing" },
-  { label: "Contact US", href: "contact" },
 ];
 
 /** Icon links to social media — edit these with links to your profiles! */
@@ -71,7 +71,19 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
           );
         })
       }
+      <li>
+        <LinkOrButton
+          style="primary"
+          href="#contact"
+          target="_blank"
+          class="flex gap-1 items-center justify-center"
+          rel="noopener">
+          Contact Us
+          <Icon icon="airplane" size="1.2em" />
+        </LinkOrButton>
+      </li>
     </ul>
+
     <div class="menu-footer">
       <!-- <div class='socials'>
         {
@@ -84,12 +96,13 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
         }
       </div> -->
 
-      <div class="theme-toggle">
+      <!-- <div class="theme-toggle">
         <ThemeToggle />
-      </div>
+      </div> -->
     </div>
   </div>
 </nav>
+
 <script>
   class MenuButton extends HTMLElement {
     constructor() {
@@ -133,6 +146,20 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
     "--scroll-padding",
     navigationHeight + "px"
   );
+
+  //get all nav items
+  const navItems = document.querySelectorAll(".nav-items li a");
+  //add click event listener
+  navItems.forEach((navItem) => {
+    navItem.addEventListener("click", () => {
+      //remove active class from all nav items
+      navItems.forEach((item) => {
+        item.classList.remove("active");
+      });
+      //add active class to the clicked nav item
+      navItem.classList.add("active");
+    });
+  });
 </script>
 
 <style>
@@ -145,10 +172,12 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
   }
 
   .menu-header {
+    position: relative;
     display: flex;
     justify-content: space-between;
     gap: 0.5rem;
     padding: 1.5rem;
+    z-index: 2;
   }
 
   .site-title {
@@ -293,18 +322,24 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
       border-radius: 999rem;
       border: 0;
       padding: 0.5rem 0.5625rem;
-      background: radial-gradient(var(--gray-900), var(--gray-800) 150%);
+      /* background: radial-gradient(var(--gray-900), var(--gray-800) 150%); */
       box-shadow: var(--shadow-md);
+      top: 5px;
+      left: -5.5rem;
+      /* z-index: -1;  */
+      padding-left: 8.5rem;
+      width: 60rem;
+      align-items: center;
     }
 
-    .nav-items::before {
+    /* .nav-items::before {
       position: absolute;
       inset: -1px;
       content: "";
-      background: var(--gradient-stroke);
+      background: #fff;
       border-radius: 999rem;
       z-index: -1;
-    }
+    } */
 
     .link {
       padding: 0.5rem 1rem;

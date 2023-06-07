@@ -10,7 +10,7 @@ import Icon from "./Icon.astro";
         OUR PROGRAM
       </h2>
       <h1 class="sm:text-3xl text-5xl font-medium title-font text-gray-900">
-        What's in our teaching bag of tricks?
+        What's in our <span class="text-purple-700">teaching bag</span> of tricks?
       </h1>
       <h2 class="text-xs tracking-widest font-medium title-font mb-1">
         A magical assortment of techniques, tools, and activities to make
@@ -18,7 +18,7 @@ import Icon from "./Icon.astro";
       </h2>
     </div>
     <div class="flex flex-wrap w-full">
-      <div class="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6">
+      <div class="lg:w-1/2 md:w-1/2 pr-2 md:pr-10 md:py-6">
         <div class="flex relative pb-12 items-center gap-5">
           <div
             class="h-full w-6 absolute inset-0 flex items-center justify-center">
@@ -164,11 +164,24 @@ import Icon from "./Icon.astro";
           </div>
         </div>
       </div>
-      <img
-        class="lg:w-3/5 scale-75 md:w-1/2 object-cover object-center rounded-lg md:mt-0 mt-12"
-        src="/assets/ourprogram.svg"
-        alt="step"
-      />
+      <div class="flex w-full lg:w-1/2 md:w-1/2 justify-center">
+        <img
+          class="rounded-full object-cover transform scale-95 md:float-right"
+          src="/assets/ourprogram.svg"
+          alt="our programs"
+        />
+      </div>
     </div>
   </div>
 </section>
+
+<style>
+  @media (min-width: 768px) {
+    .programs img {
+      aspect-ratio: auto;
+      border-radius: 4.5rem;
+      object-fit: cover;
+      transform: scale(0.7);
+    }
+  }
+</style>
