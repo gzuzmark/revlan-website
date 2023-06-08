@@ -17,8 +17,9 @@ import Icon from "./Icon.astro";
         learning fun and engaging!
       </h2>
     </div>
-    <div class="flex flex-wrap w-full">
-      <div class="lg:w-1/2 md:w-1/2 pr-2 md:pr-10 md:py-6">
+    <div class="flex flex-wrap flex-row w-full">
+      <div
+        class="sm:flex-grow md:flex-grow pr-2 md:pr-0 w-full lg:w-1/2 md:order-2 lg:order-1">
         <div class="flex relative pb-12 items-center gap-5">
           <div
             class="h-full w-6 absolute inset-0 flex items-center justify-center">
@@ -164,9 +165,10 @@ import Icon from "./Icon.astro";
           </div>
         </div>
       </div>
-      <div class="flex w-full lg:w-1/2 md:w-1/2 justify-center">
+      <div
+        class="flex justify-center w-full h-[30%] lg:w-1/2 lg:h-full md:order-1 lg:order-2">
         <img
-          class="rounded-full object-cover transform scale-95 md:float-right"
+          class="transform aspect-[4/3] scale-95 md:float-right md:scale-75"
           src="/assets/ourprogram.svg"
           alt="our programs"
         />

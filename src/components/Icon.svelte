@@ -23,7 +23,7 @@
   stroke={gradient ? `url(#${gradientId})` : color}
   fill={gradient ? `url(#${gradientId})` : color}
   {...attrs}>
-  <g set:html={iconPath} />
+  <g>{@html iconPath}</g>
   {#if gradient}
     <linearGradient
       id={gradientId}
