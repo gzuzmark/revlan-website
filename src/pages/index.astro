@@ -63,7 +63,7 @@ const projects = (await getCollection("work"))
           </div>
         </Hero>
 
-        <div class="hero-images">
+        <!-- <div class="hero-images">
           <img
             class="hero-image"
             src="/assets/hero-image.png"
@@ -74,6 +74,35 @@ const projects = (await getCollection("work"))
             src="/assets/hero-image-books.png"
             alt="hero image"
           />
+        </div> -->
+        <div class="hero-images lg:-left-20">
+          <img
+            class="hero-image z-[2]"
+            src="/assets/hero-image.png"
+            alt="hero image"
+          />
+          <div class="books-container">
+            <img
+              class="book-image item-1 bounce"
+              src="/assets/hero-travel-bag-revlan.png"
+              alt="book 1"
+            />
+            <img
+              class="book-image item-2 bounce"
+              src="/assets/hero-airplane-revlan.png"
+              alt="book 2"
+            />
+            <img
+              class="book-image item-3 motion"
+              src="/assets/hero-gaming-revlan.png"
+              alt="book 3"
+            />
+            <img
+              class="book-image item-4 motion"
+              src="/assets/hero-pink-book-revlan.png"
+              alt="book 4"
+            />
+          </div>
         </div>
       </header>
 
@@ -108,14 +137,14 @@ const projects = (await getCollection("work"))
   }
 
   .hero img {
-    aspect-ratio: 5 / 4;
+    /* aspect-ratio: 5 / 4;
     object-fit: cover;
-    object-position: top;
+    object-position: top; */
     /* border-radius: 1.5rem; */
     /* box-shadow: var(--shadow-md); */
   }
 
-  .hero-images {
+  /* .hero-images {
     display: grid;
     width: 100%;
     max-width: 1000px;
@@ -138,6 +167,81 @@ const projects = (await getCollection("work"))
     position: absolute;
     left: -8%;
     top: -12%;
+  } */
+
+  .hero-images {
+    display: grid;
+    width: 100%;
+    max-width: 1000px;
+    position: relative;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+      transform: translate3d(0, 30px, 0);
+    }
+    i {
+      animation: float linear 2.5s infinite alternate;
+    }
+  }
+
+  .motion {
+    animation: float linear 2.5s infinite alternate;
+  }
+
+  @keyframes bounce {
+    0% {
+      transform: rotate(-10deg);
+    }
+    100% {
+      transform: rotate(10deg);
+    }
+  }
+
+  .bounce {
+    animation: bounce 2.5s infinite alternate;
+  }
+
+  .books-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-areas:
+      "book1 book2 book3"
+      "book4 book4 book4 ";
+  }
+
+  .book-image {
+    position: absolute;
+  }
+
+  .item-1 {
+    grid-area: book1;
+    left: 0;
+    top: 0;
+  }
+
+  .item-2 {
+    grid-area: book2;
+    left: 10%;
+    top: -17%;
+  }
+
+  .item-3 {
+    grid-area: book3;
+    left: 3%;
+    top: 0;
+  }
+
+  .item-4 {
+    grid-area: book4;
+    left: 50%;
+    top: 0;
   }
 
   .spacer {
@@ -147,13 +251,12 @@ const projects = (await getCollection("work"))
     background-position: center;
     background-size: cover;
   }
-
   .layer1 {
     background-image: url("/assets/feature-layer.svg");
   }
 
   @media (min-width: 769px) {
-    .hero-image {
+    /* .hero-image {
       transform: scale(1);
     }
 
@@ -161,6 +264,29 @@ const projects = (await getCollection("work"))
       transform: scale(1.5);
       left: -20%;
       top: 0;
+    } */
+
+    .item-1 {
+      left: 0;
+      top: 0;
+      transform: scale(1.6) !important;
+    }
+
+    .item-2 {
+      left: 85%;
+      top: 0;
+      transform: scale(1.6) !important;
+    }
+
+    .item-3 {
+      left: 0;
+      top: 45%;
+      transform: scale(1.2) !important;
+    }
+
+    .item-4 {
+      left: 75%;
+      top: 20%;
     }
   }
 
