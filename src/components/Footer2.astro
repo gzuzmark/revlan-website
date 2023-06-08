@@ -3,17 +3,20 @@ import Icon from "./Icon.astro";
 ---
 
 <footer class="bg-purple body-font">
-  <div class="container flex w-full px-5 py-8 mx-auto">
-    <div class="left-section w-2/5 flex items-center">
-      <img src="/assets/revlan-logo.svg" alt="hero image" class="max-w-4xl" />
-      <div class="ml-4">
-        <h1 class="text-2xl font-bold text-white">Revolution Languages</h1>
-        <p class="text-base text-white">
-          Revolutionary Language Learning for Kids
-        </p>
+  <div
+    class="container flex flex-col items-stretch gap-3 md:flex-row w-full px-5 py-8 mx-auto">
+    <div class="left-section w-full md:w-2/5 flex items-center">
+      <div class="flex">
+        <img src="/assets/revlan-logo.svg" alt="hero image" class="" />
+        <div class="ml-4">
+          <h1 class="text-2xl font-bold text-white">Revolution Languages</h1>
+          <p class="text-base text-white">
+            Revolutionary Language Learning for Kids
+          </p>
+        </div>
       </div>
     </div>
-    <div class="right-section w-3/5 flex flex-col justify-between">
+    <div class="right-section w-full md:w-3/5 flex flex-col justify-between">
       <div class="contact-info flex justify-center">
         <div class="phone-number text-base text-white mr-4">
           <p>+51 915 089 522</p>
@@ -35,7 +38,7 @@ import Icon from "./Icon.astro";
   </div>
   <div class="bg-purple brightness-110 text-white">
     <div
-      class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+      class="container px-5 py-2 mx-auto flex items-center sm:flex-row flex-col">
       <div class="flex justify-between w-full">
         <span class="inline-flex sm:mt-0 mt-4 justify-center sm:justify-start">
           <a class="text-white">

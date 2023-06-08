@@ -16,11 +16,13 @@ import Link from "./ui/LinkOrButton.astro";
         Contact Us!
       </h1>
       <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
-        Get in touch with our english methodology and explore more about
-        edutainment with Revlan.
+        Get in touch with our english methodology and <span class="text-primary"
+          >explore more about edutainment with Revlan.</span
+        >
       </p>
       <ContactForm>
         <LinkOrButton
+          id="submitBtn"
           type="submit"
           block={true}
           style="secondary"
@@ -44,3 +46,57 @@ import Link from "./ui/LinkOrButton.astro";
     </style>
   </div>
 </section>
+
+<script is:inline>
+const form = document.getElementById("form");
+const result = document.getElementById("result");
+const button = document.getElementById("submitBtn");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  form.classList.add("was-validated");
+  if (!form.checkValidity()) {
+    form.querySelectorAll(":invalid")[0].focus();
+    return;
+  }
+  const formData = new FormData(form);
+  const object = Object.fromEntries(formData);
+  const json = JSON.stringify(object);
+  debugger;
+  button.textContent = "Sending...";
+  button.disabled = true;
+  fetch("https://api.web3forms.com/submit", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: json,
+  })
+    .then(async (response) => {
+      let json = await response.json();
+      if (response.status == 200) {
+        button.textContent = "Reach Out to Us Today";
+        button.disabled = false;
+        location.href = "/confirmation";
+        result.innerHTML = json.message;
+      } else {
+        console.log(response);
+        result.classList.add("text-red-500");
+        result.innerHTML = json.message;
+      }
+    })
+    .catch((error) => {
+      console.log(error);
+      result.innerHTML = "Something went wrong!";
+    })
+    .then(function () {
+      form.reset();
+      form.classList.remove("was-validated");
+      setTimeout(() => {
+        result.style.display = "none";
+      }, 5000);
+    });
+});
+</script>

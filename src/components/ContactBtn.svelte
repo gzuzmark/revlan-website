@@ -4,7 +4,6 @@
   import Button from "./ui/Button.svelte";
 
   function showContactDialog() {
-    console.log("showContactDialog");
     isContactVisible.set(true);
   }
 </script>

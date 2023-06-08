@@ -7,7 +7,6 @@
   const handleEsc = (event) => {
     if (event.key === "Escape") {
       dismissModal();
-      console.log("hiii");
     }
   };
 </script>
@@ -28,8 +27,9 @@
         Contact Us!
       </h1>
       <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
-        Get in touch with our english methodology and explore more about
-        edutainment with Revlan.
+        Get in touch with our english methodology and <span class="text-primary"
+          >explore more about edutainment with Revlan.</span
+        >span>
       </p>
       <ContactForm />
     </div>
