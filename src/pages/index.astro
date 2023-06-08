@@ -52,9 +52,9 @@ const projects = (await getCollection("work"))
               <Icon icon="arrow-right" size="1.2em" />
             </Link>
             <Link
+              id="watch-trigger"
               style="outline"
               href="#"
-              target="_blank"
               class="gap-1 items-center justify-center hidden md:flex"
               rel="noopener">
               Watch video
@@ -91,9 +91,29 @@ const projects = (await getCollection("work"))
       <ContactUs />
     </main>
 
+    <div class="modal__inner">
+      <div class="modal__content">
+        <h3 tabindex="-1">watch video modal</h3>
+
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/G8Y7HyOOWmU"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen=""
+          class="astro-37FXCHFA"></iframe>
+      </div>
+      <div class="modal__close">
+        <button>Close</button>
+      </div>
+    </div>
+
     <!-- <ContactCTA /> -->
   </div>
 </BaseLayout>
+
 <style>
   .hero {
     display: flex;
@@ -284,5 +304,44 @@ const projects = (await getCollection("work"))
       border-radius: 1.5rem;
       height: 9.5rem;
     }
+  }
+</style>
+
+<style is:global>
+  .modal__inner {
+  }
+
+  .modal__content {
+  }
+
+  .modal__content h3 {
+    display: none; /* hide the h3 element */
+  }
+
+  .modal.show .modal__inner {
+    opacity: 1;
+  }
+
+  body .modal__inner {
+    color: var(--accent-regular);
+    border-color: var(--accent-regular);
+    width: clamp(30ch, 70%, 75ch);
+    border-radius: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  body .modal__content {
+    gap: 0;
+    padding: 0;
+  }
+
+  body .modal__content iframe {
+    width: 100%; /* make the iframe takes the full width of modal__content element */
+    border-radius: 0.5rem; /* apply rounder corners */
+  }
+
+  body .modal__close {
+    display: none;
   }
 </style>

@@ -9,6 +9,7 @@ import Footer from "../components/Footer.astro";
 import Footer2 from "@components/Footer2.astro";
 import ContactModal from "../components/ContactModal.svelte";
 import Portal from "@components/Portal.astro";
+import { Modal } from "accessible-astro-components";
 
 interface Props {
   title?: string | undefined;
@@ -30,115 +31,129 @@ const { title, description } = Astro.props;
       <Portal>
         <ContactModal client:load />
       </Portal>
-    </div>
+      <Modal triggerId="watch-trigger" title="watch video modal">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/G8Y7HyOOWmU"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </Modal>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        // Add “loaded” class once the document has completely loaded.
-        addEventListener("load", () =>
-          document.documentElement.classList.add("loaded")
-        );
-        const sections = document.querySelectorAll("[data-anchor]");
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          // Add “loaded” class once the document has completely loaded.
+          addEventListener("load", () =>
+            document.documentElement.classList.add("loaded")
+          );
+          const sections = document.querySelectorAll("[data-anchor]");
 
-        const body = document.querySelector("body");
-        const page = document.body;
-        const header = document.querySelector("nav") as HTMLElement;
+          const body = document.querySelector("body");
+          const page = document.body;
+          const header = document.querySelector("nav") as HTMLElement;
 
-        page.addEventListener("scroll", function () {
-          let nav = document.getElementById("nav");
-          let firstSection = document.getElementById("howitworks");
-          let firstSectionPosition = firstSection?.getBoundingClientRect().top;
+          page.addEventListener("scroll", function () {
+            let nav = document.getElementById("nav");
+            let firstSection = document.getElementById("howitworks");
+            let firstSectionPosition =
+              firstSection?.getBoundingClientRect().top;
 
-          let scrollTop =
-            document.documentElement.scrollTop || document.body.scrollTop;
+            let scrollTop =
+              document.documentElement.scrollTop || document.body.scrollTop;
 
-          if (firstSectionPosition - scrollTop < 0) {
-            header!.style.position = "sticky";
-            header!.style.top = "0";
-          } else {
-            header!.style.position = "static";
-          }
+            if (firstSectionPosition - scrollTop < 0) {
+              header!.style.position = "sticky";
+              header!.style.top = "0";
+            } else {
+              header!.style.position = "static";
+            }
+          });
         });
-      });
-    </script>
+      </script>
 
-    <style>
-      :root {
-        --_placeholder-bg: linear-gradient(transparent, transparent);
-        --bg-image-main: url("/assets/backgrounds/bg-main-light-800w.jpg");
-        --bg-image-main-curves: url("/assets/backgrounds/bg-main-light.svg");
-        --bg-image-main-rainbow: url("/assets/backgrounds/bg-main-rainbow.svg");
-        --bg-image-secondary-rainbow: url("/assets/backgrounds/bg-secondary-rainbow.svg");
-        --bg-image-subtle-1: var(--_placeholder-bg);
-        --bg-image-subtle-2: var(--_placeholder-bg);
-        --bg-image-footer: var(--_placeholder-bg);
-        --bg-svg-blend-mode: overlay;
-        --bg-blend-mode: darken;
-        --bg-image-aspect-ratio: 2.25;
-        --bg-scale: 1.68;
-        --bg-aspect-ratio: calc(var(--bg-image-aspect-ratio) / var(--bg-scale));
-        --bg-gradient-size: calc(var(--bg-scale) * 100%);
-      }
-
-      :root.theme-dark {
-        --bg-image-main: url("/assets/backgrounds/bg-main-dark-800w.jpg");
-        --bg-image-main-curves: url("/assets/backgrounds/bg-main-dark.svg");
-        --bg-svg-blend-mode: darken;
-        --bg-blend-mode: lighten;
-      }
-
-      /* These backgrounds are displayed below the fold, so we lazy load them
-			   once the `.loaded` class has been set.  */
-      :root.loaded {
-        --bg-image-subtle-1: url("/assets/backgrounds/bg-subtle-1-light-800w.jpg");
-        --bg-image-subtle-2: url("/assets/backgrounds/bg-subtle-2-light-800w.jpg");
-        --bg-image-footer: url("/assets/backgrounds/bg-footer-light-800w.jpg");
-      }
-      :root.loaded.theme-dark {
-        --bg-image-subtle-1: url("/assets/backgrounds/bg-subtle-1-dark-800w.jpg");
-        --bg-image-subtle-2: url("/assets/backgrounds/bg-subtle-2-dark-800w.jpg");
-        --bg-image-footer: url("/assets/backgrounds/bg-footer-dark-800w.jpg");
-      }
-
-      @media (min-width: 50em) {
+      <style>
         :root {
-          --bg-scale: 1;
-          --bg-image-main: url("/assets/backgrounds/bg-main-light-1440w.jpg");
-        }
-        :root.theme-dark {
-          --bg-image-main: url("/assets/backgrounds/bg-main-dark-1440w.jpg");
+          --_placeholder-bg: linear-gradient(transparent, transparent);
+          --bg-image-main: url("/assets/backgrounds/bg-main-light-800w.jpg");
+          --bg-image-main-curves: url("/assets/backgrounds/bg-main-light.svg");
+          --bg-image-main-rainbow: url("/assets/backgrounds/bg-main-rainbow.svg");
+          --bg-image-secondary-rainbow: url("/assets/backgrounds/bg-secondary-rainbow.svg");
+          --bg-image-subtle-1: var(--_placeholder-bg);
+          --bg-image-subtle-2: var(--_placeholder-bg);
+          --bg-image-footer: var(--_placeholder-bg);
+          --bg-svg-blend-mode: overlay;
+          --bg-blend-mode: darken;
+          --bg-image-aspect-ratio: 2.25;
+          --bg-scale: 1.68;
+          --bg-aspect-ratio: calc(
+            var(--bg-image-aspect-ratio) / var(--bg-scale)
+          );
+          --bg-gradient-size: calc(var(--bg-scale) * 100%);
         }
 
+        :root.theme-dark {
+          --bg-image-main: url("/assets/backgrounds/bg-main-dark-800w.jpg");
+          --bg-image-main-curves: url("/assets/backgrounds/bg-main-dark.svg");
+          --bg-svg-blend-mode: darken;
+          --bg-blend-mode: lighten;
+        }
+
+        /* These backgrounds are displayed below the fold, so we lazy load them
+			   once the `.loaded` class has been set.  */
         :root.loaded {
-          --bg-image-subtle-1: url("/assets/backgrounds/bg-subtle-1-light-1440w.jpg");
-          --bg-image-subtle-2: url("/assets/backgrounds/bg-subtle-2-light-1440w.jpg");
-          --bg-image-footer: url("/assets/backgrounds/bg-footer-light-1440w.jpg");
+          --bg-image-subtle-1: url("/assets/backgrounds/bg-subtle-1-light-800w.jpg");
+          --bg-image-subtle-2: url("/assets/backgrounds/bg-subtle-2-light-800w.jpg");
+          --bg-image-footer: url("/assets/backgrounds/bg-footer-light-800w.jpg");
         }
         :root.loaded.theme-dark {
-          --bg-image-subtle-1: url("/assets/backgrounds/bg-subtle-1-dark-1440w.jpg");
-          --bg-image-subtle-2: url("/assets/backgrounds/bg-subtle-2-dark-1440w.jpg");
-          --bg-image-footer: url("/assets/backgrounds/bg-footer-dark-1440w.jpg");
+          --bg-image-subtle-1: url("/assets/backgrounds/bg-subtle-1-dark-800w.jpg");
+          --bg-image-subtle-2: url("/assets/backgrounds/bg-subtle-2-dark-800w.jpg");
+          --bg-image-footer: url("/assets/backgrounds/bg-footer-dark-800w.jpg");
         }
-      }
 
-      .backgrounds {
-        min-height: 100%;
-        isolation: isolate;
-        background:
-         /*header1*/ var(--bg-image-main-rainbow) top
-          center/var(--bg-gradient-size) no-repeat;
-        background-blend-mode: /*noise*/ overlay,
-          /*footer*/ var(--bg-blend-mode), /*header1*/ var(--bg-svg-blend-mode),
-          /*header2*/ normal, /*base*/ normal;
-      }
-      @media (forced-colors: active) {
-        /* Deactivate custom backgrounds for high contrast users. */
-        .backgrounds {
-          background: none;
-          background-blend-mode: none;
-          --bg-gradient-size: none;
+        @media (min-width: 50em) {
+          :root {
+            --bg-scale: 1;
+            --bg-image-main: url("/assets/backgrounds/bg-main-light-1440w.jpg");
+          }
+          :root.theme-dark {
+            --bg-image-main: url("/assets/backgrounds/bg-main-dark-1440w.jpg");
+          }
+
+          :root.loaded {
+            --bg-image-subtle-1: url("/assets/backgrounds/bg-subtle-1-light-1440w.jpg");
+            --bg-image-subtle-2: url("/assets/backgrounds/bg-subtle-2-light-1440w.jpg");
+            --bg-image-footer: url("/assets/backgrounds/bg-footer-light-1440w.jpg");
+          }
+          :root.loaded.theme-dark {
+            --bg-image-subtle-1: url("/assets/backgrounds/bg-subtle-1-dark-1440w.jpg");
+            --bg-image-subtle-2: url("/assets/backgrounds/bg-subtle-2-dark-1440w.jpg");
+            --bg-image-footer: url("/assets/backgrounds/bg-footer-dark-1440w.jpg");
+          }
         }
-      }
-    </style>
+
+        .backgrounds {
+          min-height: 100%;
+          isolation: isolate;
+          background:
+         /*header1*/ var(--bg-image-main-rainbow) top
+            center/var(--bg-gradient-size) no-repeat;
+          background-blend-mode: /*noise*/ overlay,
+            /*footer*/ var(--bg-blend-mode),
+            /*header1*/ var(--bg-svg-blend-mode), /*header2*/ normal,
+            /*base*/ normal;
+        }
+        @media (forced-colors: active) {
+          /* Deactivate custom backgrounds for high contrast users. */
+          .backgrounds {
+            background: none;
+            background-blend-mode: none;
+            --bg-gradient-size: none;
+          }
+        }
+      </style>
+    </div>
   </body>
 </html>
