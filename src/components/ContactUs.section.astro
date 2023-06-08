@@ -10,7 +10,7 @@ import Link from "./ui/LinkOrButton.astro";
   class="text-gray-600 body-font relative contact-bg contact-bg-overlay">
   <div class="container px-5 py-24 mx-auto flex">
     <div
-      class="lg:w-1/2 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md">
+      class="lg:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md">
       <h1
         class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
         Contact Us!
@@ -63,7 +63,7 @@ form.addEventListener("submit", function (e) {
   const formData = new FormData(form);
   const object = Object.fromEntries(formData);
   const json = JSON.stringify(object);
-  debugger;
+
   button.textContent = "Sending...";
   button.disabled = true;
   fetch("https://api.web3forms.com/submit", {
