@@ -135,6 +135,13 @@
 		--step-3: clamp(1.73rem, calc(0.58rem + 5.76vw), 6.10rem);
 		--step-4: clamp(2.07rem, calc(0.61rem + 7.31vw), 7.63rem);
 		--step-5: clamp(2.49rem, calc(0.63rem + 9.27vw), 9.54rem);
+
+		--scale-animation-default: 1;
+		--scale-animation-md: 1.2;
+		--scale-animation-lg: 1.6;
+
+		--scale-animation-primary: var(--scale-animation-default);
+		--scale-animation-secondary: var(--scale-animation-default);
 	}
 
 	.dark {

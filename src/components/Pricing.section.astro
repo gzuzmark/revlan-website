@@ -11,7 +11,7 @@ import Icon from "./Icon.astro";
       </h2>
       <h1
         class="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900">
-        Price Your Fun: Get Ready for the Show!
+        <span class="text-primary">Price Your Fun:</span> Get Ready for the Show!
       </h1>
       <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500">
         Choose the perfect package to make your show experience unforgettable.
@@ -228,7 +228,7 @@ import Icon from "./Icon.astro";
       </p>
       <h1
         class="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900">
-        Contact us to get a special package
+        Contact us to get a <span class="text-primary">special package</span>
       </h1>
       <h2
         class="text-xs text-black tracking-widest font-medium title-font mb-1">
@@ -252,14 +252,18 @@ import Icon from "./Icon.astro";
     const priceElements = document.getElementsByClassName("price");
 
     const updatePrices = (currency) => {
-      const usdPrices = [7, 18, 40];
+      const usdPrices = [
+        [7, 25.9],
+        [18, 69.99],
+        [40, 149.99],
+      ];
       const exchangeRate = 3.7;
 
       for (let i = 0; i < priceElements.length; i++) {
         const newPrice =
           currency === "USD"
-            ? { symbol: "$", value: usdPrices[i] }
-            : { symbol: "S/", value: usdPrices[i] * exchangeRate };
+            ? { symbol: "$", value: usdPrices[i][0] }
+            : { symbol: "S/", value: usdPrices[i][1] };
 
         priceElements[i].querySelector("span").textContent = `${
           newPrice.symbol

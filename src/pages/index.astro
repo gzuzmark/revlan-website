@@ -179,27 +179,51 @@ const projects = (await getCollection("work"))
 
   @keyframes float {
     0% {
-      transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0) scale(var(--scale-animation-default));
     }
 
     100% {
-      transform: translate3d(0, 30px, 0);
+      transform: translate3d(0, 30px, 0) scale(var(--scale-animation-default));
     }
-    i {
-      animation: float linear 2.5s infinite alternate;
-    }
-  }
-
-  .motion {
-    animation: float linear 2.5s infinite alternate;
   }
 
   @keyframes bounce {
     0% {
-      transform: rotate(-10deg);
+      transform: rotate(-10deg) scale(var(--scale-animation-primary));
     }
+
     100% {
-      transform: rotate(10deg);
+      transform: rotate(10deg) scale(var(--scale-animation-primary));
+    }
+  }
+
+  @keyframes float-md {
+    0% {
+      transform: translate3d(0, 0, 0) scale(var(--scale-animation-md));
+    }
+
+    100% {
+      transform: translate3d(0, 30px, 0) scale(var(--scale-animation-md));
+    }
+  }
+
+  @keyframes float-lg {
+    0% {
+      transform: translate3d(0, 0, 0) scale(var(--scale-animation-primary));
+    }
+
+    100% {
+      transform: translate3d(0, 30px, 0) scale(var(--scale-animation-primary));
+    }
+  }
+
+  @keyframes bounce-lg {
+    0% {
+      transform: rotate(-10deg) scale(var(--scale-animation-secondary));
+    }
+
+    100% {
+      transform: rotate(10deg) scale(var(--scale-animation-secondary));
     }
   }
 
@@ -256,40 +280,21 @@ const projects = (await getCollection("work"))
     background-image: url("/assets/feature-layer.svg");
   }
 
-  @media (min-width: 769px) {
-    /* .hero-image {
-      transform: scale(1);
+  @media (min-width: 768px) {
+    /* 800px if fontsize base is 16px */
+    :root {
+      --scale-animation-secondary: 1.6;
+      --scale-animation-primary: 0.9;
     }
 
-    .hero-image-books {
-      transform: scale(1.5);
-      left: -20%;
-      top: 0;
-    } */
-
-    .item-1 {
-      left: 0;
-      top: 0;
-    }
-
+    .item-1,
     .item-2 {
-      left: 85%;
-      top: 0;
-    }
-
-    .item-3 {
-      left: 0;
-      top: 45%;
+      animation: bounce-lg 2.5s infinite alternate;
     }
 
     .item-4 {
-      left: 75%;
-      top: 20%;
+      animation: float-md 2.5s infinite alternate;
     }
-  }
-
-  @media (min-width: 768px) {
-    /* 800px if fontsize base is 16px */
     .hero {
       display: grid;
       grid-template-columns: 9fr 4fr;
@@ -340,6 +345,52 @@ const projects = (await getCollection("work"))
 
     .cta {
       grid-area: cta;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    /* .hero-image {
+      transform: scale(1);
+    }
+
+    .hero-image-books {
+      transform: scale(1.5);
+      left: -20%;
+      top: 0;
+    } */
+
+    :root {
+      --scale-animation-secondary: var(--scale-animation-lg);
+      --scale-animation-primary: var(--scale-animation-lg);
+    }
+
+    .item-1,
+    .item-2 {
+      animation: bounce-lg 2.5s infinite alternate;
+    }
+
+    .item-4 {
+      animation: float-lg 2.5s infinite alternate;
+    }
+
+    .item-1 {
+      left: 0;
+      top: 0;
+    }
+
+    .item-2 {
+      left: 85%;
+      top: 0;
+    }
+
+    .item-3 {
+      left: 0;
+      top: 45%;
+    }
+
+    .item-4 {
+      left: 75%;
+      top: 20%;
     }
   }
 
