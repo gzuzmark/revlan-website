@@ -1,4 +1,7 @@
 ---
+import i18next, { t } from "i18next";
+import { Trans, HeadHrefLangs } from "astro-i18next/components";
+
 interface Props {
   title: string;
   tagline?: string;
@@ -11,10 +14,13 @@ const { align = "center", tagline, title } = Astro.props;
 <header class:list={["hero stack gap-4", align]}>
   <div class="stack gap-2">
     <h1 class="title">
-      Experience the power <br />of <span class="text-primary">Edutainment</span
-      > with REVLAN
+      <Trans i18nKey="home.title">
+        Experience the power <br />of <span class="text-primary"
+          >Edutainment</span
+        > with REVLAN
+      </Trans>
     </h1>
-    {tagline && <p class="tagline">{tagline}</p>}
+    {tagline && <p class="tagline">{t("home.subtitle")}</p>}
   </div>
   <slot />
 </header>

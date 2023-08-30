@@ -1,6 +1,8 @@
 ---
 import Icon from "./Icon.astro";
 import Link from "./ui/LinkOrButton.astro";
+import i18next, { t, changeLanguage } from "i18next";
+import { Trans } from "astro-i18next/components";
 ---
 
 <section id="howitworks" class="text-gray-600 body-font bg-bgsecondary">
@@ -8,13 +10,15 @@ import Link from "./ui/LinkOrButton.astro";
     <div class="container px-5 py-6 lg:py-4 md:py-6 mx-auto bg-bgsecondary">
       <div class="flex flex-col text-center w-full mb-20">
         <h2 class="text-xs tracking-widest font-medium title-font mb-1">
-          HOW IT WORKS
+          {t("home.features-title")}
         </h2>
         <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900">
-          How do we deliver <span class="text-primary">Edutainment</span>
+          <Trans i18nKey="home.features-title2">
+            How do we deliver <span class="text-primary">Edutainment</span>
+          </Trans>
         </h1>
         <h2 class="text-xs tracking-widest font-medium title-font mb-1">
-          Know more about our English teaching methodology
+          {t("home.features-subtitle")}
         </h2>
       </div>
       <div class="flex flex-wrap -m-4">
@@ -26,13 +30,12 @@ import Link from "./ui/LinkOrButton.astro";
                 <Icon icon="piggy-bank" size="1.5em" />
               </div>
               <h2 class="text-gray-900 text-lg title-font font-medium">
-                Convenient and Affordable Learning
+                {t("home.feature1-title")}
               </h2>
             </div>
             <div class="flex-grow">
               <p class="leading-relaxed text-base">
-                REVLAN's one to many model ensures affordability without
-                compromising engagement or effectiveness.
+                {t("home.feature1-text")}
               </p>
               <a class="mt-3 text-red-500 inline-flex items-center"
                 >Learn More
@@ -58,14 +61,12 @@ import Link from "./ui/LinkOrButton.astro";
                 <Icon icon="diamond" size="1.5em" />
               </div>
               <h2 class="text-gray-900 text-lg title-font font-medium">
-                High-Quality Edutainment
+                {t("home.feature2-title")}
               </h2>
             </div>
             <div class="flex-grow">
               <p class="leading-relaxed text-base">
-                We offer a unique combination of education and entertainment,
-                providing a fun and engaging way for children to learn a new
-                language.
+                {t("home.feature2-text")}
               </p>
               <a class="mt-3 text-red-500 inline-flex items-center"
                 >Learn More
@@ -91,16 +92,12 @@ import Link from "./ui/LinkOrButton.astro";
                 <Icon icon="microphone" size="1.5em" />
               </div>
               <h2 class="text-gray-900 text-lg title-font font-medium">
-                Improved Language Skills
+                {t("home.feature3-title")}
               </h2>
             </div>
             <div class="flex-grow">
               <p class="leading-relaxed text-base">
-                Learning a new language can open up a world of opportunities for
-                children, both academically and professionally. By exposing
-                children to a new language at an early age, REVLAN can help them
-                develop strong language skills that will serve them well
-                throughout their lives.
+                {t("home.feature3-text")}
               </p>
               <a class="mt-3 text-red-500 inline-flex items-center"
                 >Learn More
@@ -126,14 +123,12 @@ import Link from "./ui/LinkOrButton.astro";
                 <Icon icon="airplane" size="1.5em" />
               </div>
               <h2 class="text-gray-900 text-lg title-font font-medium">
-                Cultural Awareness
+                {t("home.feature4-title")}
               </h2>
             </div>
             <div class="flex-grow">
               <p class="leading-relaxed text-base">
-                REVLAN fosters cultural understanding and empathy in children,
-                shaping them into open minded individuals ready to thrive in our
-                global society.
+                {t("home.feature4-text")}
               </p>
               <a class="mt-3 text-red-500 inline-flex items-center"
                 >Learn More
@@ -159,14 +154,12 @@ import Link from "./ui/LinkOrButton.astro";
                 <Icon icon="mask-happy" size="1.5em" />
               </div>
               <h2 class="text-gray-900 text-lg title-font font-medium">
-                Confidence and Empowerment
+                {t("home.feature5-title")}
               </h2>
             </div>
             <div class="flex-grow">
               <p class="leading-relaxed text-base">
-                REVLAN's shows effortlessly enhance vocabulary, pronunciation,
-                and intonation, creating a seamless learning experience where
-                children absorb language skills without even realizing it.
+                {t("home.feature5-text")}
               </p>
               <a class="mt-3 text-red-500 inline-flex items-center"
                 >Learn More
@@ -192,13 +185,12 @@ import Link from "./ui/LinkOrButton.astro";
                 <Icon icon="thumbs-up" size="1.5em" />
               </div>
               <h2 class="text-gray-900 text-lg title-font font-medium">
-                Great solution for parents
+                {t("home.feature5-title")}
               </h2>
             </div>
             <div class="flex-grow">
               <p class="leading-relaxed text-base">
-                REVLAN: Fun, effective, and affordable language learning for
-                your child.
+                {t("home.feature6-text")}
               </p>
               <a class="mt-3 text-red-500 inline-flex items-center"
                 >Learn More
@@ -225,7 +217,7 @@ import Link from "./ui/LinkOrButton.astro";
             target="_self"
             class="flex gap-1 items-center justify-center"
             rel="noopener">
-            Secure Your Child's Spot Today
+            {t("home.features-cta")}
             <Icon icon="airplane" size="1.2em" />
           </Link>
         </div>

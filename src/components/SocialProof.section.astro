@@ -1,15 +1,20 @@
+---
+import i18next, { t, changeLanguage } from "i18next";
+import { Trans } from "astro-i18next/components";
+---
+
 <section class="text-gray-600 body-font bg-bgsecondary">
   <div class="container px-5 py-24 mx-auto">
     <div class="flex flex-col text-center w-full mb-20">
       <h2
         class="text-xs text-red-500 tracking-widest font-medium title-font mb-1">
-        SOCIAL PROOF
+        {t("home.reviews.section-title")}
       </h2>
       <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900">
-        See What Our Satisfied Customers Are Saying!
+        {t("home.reviews.main-title")}
       </h1>
       <h2 class="text-xs tracking-widest font-medium title-font mb-1">
-        Read through our reviews to see why you can trust us.
+        {t("home.reviews.text")}
       </h2>
     </div>
     <div class="flex flex-wrap -m-4">
@@ -91,7 +96,9 @@
     </div>
     <div class="flex flex-col text-center w-full mb-20">
       <h2 class="sm:text-3xl text-2xl font-medium title-font text-gray-900">
-        Our Alliances for a <span class="text-primary">Brighter Future!</span>
+        <Trans i18nKey="home.aboutus.second-title">
+          Our Alliances for a <span class="text-primary">Brighter Future!</span>
+        </Trans>
       </h2>
     </div>
     <div class="flex flex-wrap gap-3 items-center justify-center">

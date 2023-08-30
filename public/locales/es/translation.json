@@ -1,0 +1,76 @@
+{
+  "site": {
+    "title": "My awesome website!",
+    "description": "Here is the description of my awesome website!"
+  },
+  "home": {
+    "title": "Experimenta el poder del <1>Edutainment</1>  con REVLAN.",
+    "subtitle": "Revolutionary Language Learning for Kids",
+    "main-cta": "Únete al World Tour ahora",
+    "watch-video-cta": "Ver Video",
+    "features-title": "¿Cómo funciona?",
+    "features-title2": "Cómo ofrecemos <0>Edutainment</0>",
+    "features-subtitle": "Conoce más acerca de nuestra metodología de enseñanza de inglés.",
+    "feature1-title": "Aprendizaje conveniente y asequible ",
+    "feature1-text": "El modelo uno-a-muchos de REVLAN garantiza la asequibilidad sin comprometer la interactividad o la efectividad.",
+    "feature2-title": "Edutainment de alta calidad ",
+    "feature2-text": "Ofrecemos una combinación única de educación y entretenimiento, brindando una forma divertida y atractiva para que los niños aprendan un nuevo idioma.",
+    "feature3-title": "Mejora de habilidades lingüísticas",
+    "feature3-text": "Nuestros programas no solo amplían el vocabulario y fortalecen la pronunciación y entonación, sino que también aumentan la autoestima y confianza de tu hijo, una base crucial para dominar cualquier idioma.",
+    "feature4-title": "Conciencia cultural",
+    "feature4-text": "REVLAN fomenta la comprensión cultural y la empatía en los niños, formándolos como individuos de mente abierta listos para prosperar en nuestra sociedad global.",
+    "feature5-title": "Confianza y empoderamiento ",
+    "feature5-text": "Los programas de REVLAN mejoran sin esfuerzo el vocabulario, la pronunciación y la entonación, creando una experiencia de aprendizaje fluida donde los niños absorben habilidades lingüísticas sin siquiera darse cuenta.",
+    "feature6-title": "Una gran solución para los padres ",
+    "feature6-text": "REVLAN: Aprendizaje de idiomas divertido, efectivo y asequible para tu hijo.",
+    "features-cta": "Asegura hoy mismo el lugar de tu hijo/a",
+    "programs": {
+      "title": "NUESTRO PROGRAMA",
+      "title2": "¿Qué hay en nuestra <0>bolsa de trucos</0> de enseñanza?",
+      "subtitle": "¡Una asombrosa variedad de técnicas, herramientas y actividades para hacer del aprendizaje algo divertido y atractivo!",
+      "item1-title": "Un nuevo país, un nuevo episodio",
+      "item1-text": "Cada programa se enfoca en explorar un nuevo destino.",
+      "item2-title": "Familiarízate con el país antes de despegar",
+      "item2-text": "Desde su ubicación en el mapa hasta su colorida bandera y su región en el mundo, embarca en un viaje educativo como ningún otro.",
+      "item3-title": "Despegue virtual",
+      "item3-text": "El programa comienza con un despegue virtual en un avión y un breve video sobre el país de destino.",
+      "item4-title": "¡Vamos a explorar y aprender!",
+      "item4-text": "Una vez aterrizados en el país, comienza la exploración a través de juegos interactivos temáticos sobre las atracciones y la cultura del país.",
+      "item5-title": "Participa y juega",
+      "item5-text": "Los juegos están diseñados para involucrar a los niños en inglés de una manera muy natural, fomentando el aprendizaje del idioma mientras se divierten.",
+      "item6-title": "¡Es hora de partir hacia la próxima aventura!",
+      "item6-text": "Cada episodio concluye con una despedida al país, dejando a los participantes emocionados por la próxima aventura."
+    },
+    "aboutus": {
+      "section-title": "SOBRE NOSOTROS",
+      "main-title": "¡Conoce a tus <0>mentores!</0>",
+      "text": "Conoce a los educadores en tu vida que pueden ayudarte a guiarte en el camino de aprendizaje. Ellos tienen sabiduría, experiencia y conocimientos para ayudarte a alcanzar el éxito.",
+      "cta": "¡Contáctanos ahora!"
+    },
+    "reviews": {
+      "section-title": "TESTIMONIOS",
+      "main-title": "¡Descubre lo que dicen nuestros clientes satisfechos!",
+      "text": "Lee nuestras reseñas para saber por qué puedes confiar en nosotros.",
+      "second-title": "Our Alliances for a <0>Brighter Future!</0>"
+    },
+    "pricing": {
+      "section-title": "PRICING",
+      "main-title": "<0>Price Your Fun:</0> Get Ready for the Show!",
+      "text": "Choose the perfect package to make your show experience unforgettable.",
+      "second-title": "Our Alliances for a <0>Brighter Future!</0>",
+      "features-title": "Digital products",
+      "features": {
+        "1": "Travel itinerary",
+        "2": "Continue the Fun Activity Book",
+        "3": "Printable passport",
+        "4": "Certification of Completion"
+      },
+      "package1": {
+        "price": "<0>$7</0> <1>/por niño/a</1>",
+        "title": "Tourist",
+        "type": "(Single show)",
+        "main": "A single show ticket"
+      }
+    }
+  }
+}

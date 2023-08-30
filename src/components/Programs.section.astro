@@ -1,5 +1,7 @@
 ---
 import Icon from "./Icon.astro";
+import i18next, { t, changeLanguage } from "i18next";
+import { Trans } from "astro-i18next/components";
 ---
 
 <section id="programs" class="text-gray-600 body-font bg-purple-50">
@@ -7,14 +9,15 @@ import Icon from "./Icon.astro";
     <div class="flex flex-col text-center w-full mb-20">
       <h2
         class="text-xs text-black tracking-widest font-medium title-font mb-1">
-        OUR PROGRAM
+        {t("home.programs.title")}
       </h2>
       <h1 class="sm:text-3xl text-5xl font-medium title-font text-gray-900">
-        What's in our <span class="text-purple-700">teaching bag</span> of tricks?
+        <Trans i18nKey="home.programs.title2">
+          What's in our <span class="text-purple-700">teaching bag</span> of tricks?
+        </Trans>
       </h1>
       <h2 class="text-xs tracking-widest font-medium title-font mb-1">
-        A magical assortment of techniques, tools, and activities to make
-        learning fun and engaging!
+        {t("home.programs.subtitle")}
       </h2>
     </div>
     <div class="flex flex-wrap flex-row w-full">
@@ -36,10 +39,10 @@ import Icon from "./Icon.astro";
           <div class="flex-grow pl-4">
             <h2
               class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
-              A new country a new episode
+              {t("home.programs.item1-title")}
             </h2>
             <p class="leading-relaxed">
-              Each show focuses on exploring a new country
+              {t("home.programs.item1-text")}
             </p>
           </div>
         </div>
@@ -59,11 +62,10 @@ import Icon from "./Icon.astro";
           <div class="flex-grow pl-4">
             <h2
               class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
-              Get familiar with the country before take off
+              {t("home.programs.item2-title")}
             </h2>
             <p class="leading-relaxed">
-              From the location on the map to the vibrant flag and its region in
-              the world, embark on an educational journey like no other.
+              {t("home.programs.item2-text")}
             </p>
           </div>
         </div>
@@ -83,11 +85,10 @@ import Icon from "./Icon.astro";
           <div class="flex-grow pl-4">
             <h2
               class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
-              Virtual take off
+              {t("home.programs.item3-title")}
             </h2>
             <p class="leading-relaxed">
-              The show starts with a virtual takeoff in an airplane and a short
-              video on the destination country
+              {t("home.programs.item3-text")}
             </p>
           </div>
         </div>
@@ -107,11 +108,10 @@ import Icon from "./Icon.astro";
           <div class="flex-grow pl-4">
             <h2
               class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
-              Let’s explore and learn
+              {t("home.programs.item4-title")}
             </h2>
             <p class="leading-relaxed">
-              Once landed in the country, the exploration begins through
-              interactive games themed around the country's attractions/culture
+              {t("home.programs.item4-text")}
             </p>
           </div>
         </div>
@@ -131,11 +131,10 @@ import Icon from "./Icon.astro";
           <div class="flex-grow pl-4">
             <h2
               class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
-              Engage and play
+              {t("home.programs.item5-title")}
             </h2>
             <p class="leading-relaxed">
-              The games are designed to engage children in English in a very
-              organic way, promoting language learning while having fun.
+              {t("home.programs.item5-text")}
             </p>
           </div>
         </div>
@@ -155,11 +154,10 @@ import Icon from "./Icon.astro";
           <div class="flex-grow pl-4">
             <h2
               class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
-              It’s time to leave for the next adventure!
+              {t("home.programs.item6-title")}
             </h2>
             <p class="leading-relaxed">
-              Each episode concludes with a farewell to the country, leaving the
-              viewers excited for the next adventure.
+              {t("home.programs.item6-text")}
             </p>
           </div>
         </div>

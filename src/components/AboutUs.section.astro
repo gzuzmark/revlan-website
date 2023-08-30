@@ -2,6 +2,8 @@
 import Icon from "./Icon.astro";
 import Link from "./ui/LinkOrButton.astro";
 import ContactBtn from "./ContactBtn.svelte";
+import i18next, { t, changeLanguage } from "i18next";
+import { Trans } from "astro-i18next/components";
 ---
 
 <section id="about" class="text-gray-600 body-font">
@@ -18,20 +20,20 @@ import ContactBtn from "./ContactBtn.svelte";
       class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
       <h2
         class="text-xs text-black tracking-widest font-medium title-font mb-1">
-        ABOUT US
+        {t("home.aboutus.section-title")}
       </h2>
       <h1
         class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
-        Meet Your <span class="text-primary">Mentors!</span>
+        <Trans i18nKey="home.aboutus.main-title">
+          Meet Your <span class="text-primary">Mentors!</span>
+        </Trans>
         <br class="hidden lg:inline-block" />
       </h1>
       <p class="mb-8 leading-relaxed">
-        Get to know the educators in your life that can help guide you on your
-        journey. They have the wisdom, experience and knowledge to help you
-        achieve success.
+        {t("home.aboutus.text")}
       </p>
       <div class="flex justify-center">
-        <ContactBtn client:visible />
+        <ContactBtn text={t("home.aboutus.cta")} client:visible />
       </div>
     </div>
   </div>

@@ -1,0 +1,76 @@
+{
+  "site": {
+    "title": "My awesome website!",
+    "description": "Here is the description of my awesome website!"
+  },
+  "home": {
+    "title": "Experience the power of <1>Edutainment</1> with REVLAN",
+    "subtitle": "Revolutionary Language Learning for Kids",
+    "main-cta": "Join World Tour Now",
+    "watch-video-cta": "Watch video",
+    "features-title": "HOW IT WORKS",
+    "features-title2": "How do we deliver <0>Edutainment</0>",
+    "features-subtitle": "Know more about our English teaching methodology",
+    "feature1-title": "Convenient and Affordable Learning",
+    "feature1-text": "REVLAN's one to many model ensures affordability without compromising engagement or effectiveness.",
+    "feature2-title": "High-Quality Edutainment",
+    "feature2-text": "We offer a unique combination of education and entertainment, providing a fun and engaging way for children to learn a new language.",
+    "feature3-title": "Improved Language Skills",
+    "feature3-text": "Our shows not only expand vocabulary and strengthen pronunciation and intonation, but they also boost your childs self esteem and confidence a crucial foundation for mastering any language.",
+    "feature4-title": "Culture Awareness",
+    "feature4-text": "REVLAN fosters cultural understanding and empathy in children, shaping them into open minded individuals ready to thrive in our global society.",
+    "feature5-title": "Confidence and Empowerment",
+    "feature5-text": "REVLAN's shows effortlessly enhance vocabulary, pronunciation, and intonation, creating a seamless learning experience where children absorb language skills without even realizing it.",
+    "feature6-title": "Great solution for parents",
+    "feature6-text": "REVLAN: Fun, effective, and affordable language learning for your child.",
+    "features-cta": "Secure Your Child s Spot Today",
+    "programs": {
+      "title": "THE SHOW",
+      "title2": "What s in our o <0>teaching bag<0/> of tricks?",
+      "subtitle": "A magical assortment of techniques, tools, and activities to make learning fun and engaging!",
+      "item1-title": "A new country a new episode",
+      "item1-text": "Each show focuses on exploring a new country.",
+      "item2-title": "Get familiar with the country before take off",
+      "item2-text": "From the location on the map to the vibrant flag and its region in the world, embark on an educational journey like no other.",
+      "item3-title": "Virtual take off",
+      "item3-text": "The show starts with a virtual takeoff in an airplane and a short video on the destination country.",
+      "item4-title": "Let s explore and learn",
+      "item4-text": "Once landed in the country, the exploration begins through interactive games themed around the country s attractions/ culture.",
+      "item5-title": "Engage and play",
+      "item5-text": "The games are designed to engage children in English in a very organic way, promoting language learning while having fun.",
+      "item6-title": "It s time to leave for the next adventure!",
+      "item6-text": "Each episode concludes with a farewell to the country, leaving the viewers excited for the next adventure."
+    },
+    "aboutus": {
+      "section-title": "ABOUT US",
+      "main-title": "Meet Your <0>Mentors!</0>",
+      "text": "Get to know the educators in your life that can help guide you on your journey. They have the wisdom, experience and knowledge to help you achieve success.",
+      "cta": "Contact us now!"
+    },
+    "reviews": {
+      "section-title": "REVIEWS",
+      "main-title": "See What Our <0>Traveler s moms</0> Are Saying!",
+      "text": "Read through our reviews to see why you can trust us.",
+      "second-title": "Our Alliances for a <0>Brighter Future!</0>"
+    },
+    "pricing": {
+      "section-title": "PRICING",
+      "main-title": "<0>Price Your Fun:</0> Get Ready for the Show!",
+      "text": "Choose the perfect package to make your show experience unforgettable.",
+      "second-title": "Our Alliances for a <0>Brighter Future!</0>",
+      "features-title": "Digital products",
+      "features": {
+        "1": "Travel itinerary",
+        "2": "Continue the Fun Activity Book",
+        "3": "Printable passport",
+        "4": "Certification of Completion"
+      },
+      "package1": {
+        "price": "<0>$7</0> <1>/por niño/a</1>",
+        "title": "Tourist",
+        "type": "(Single show)",
+        "main": "A single show ticket"
+      }
+    }
+  }
+}

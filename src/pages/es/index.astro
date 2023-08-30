@@ -2,19 +2,19 @@
 import { Picture } from "@astrojs/image/components";
 import { getCollection } from "astro:content";
 // Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
-import BaseLayout from "../layouts/BaseLayout.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
 // Component Imports
-import CallToAction from "../components/CallToAction.astro";
-import Grid from "../components/Grid.astro";
-import Hero from "../components/Hero.astro";
-import Icon from "../components/Icon.astro";
-import Pill from "../components/Pill.astro";
-import PortfolioPreview from "../components/PortfolioPreview.astro";
+import CallToAction from "../../components/CallToAction.astro";
+import Grid from "../../components/Grid.astro";
+import Hero from "../../components/Hero.astro";
+import Icon from "../../components/Icon.astro";
+import Pill from "../../components/Pill.astro";
+import PortfolioPreview from "../../components/PortfolioPreview.astro";
 import Link from "@components/ui/LinkOrButton.astro";
-import heroImage from "../../public/assets/hero-image.png";
+import heroImage from "../../../public/assets/hero-image.png";
 // Page section components
-import ContactCTA from "../components/ContactCTA.astro";
-import Skills from "../components/Skills.astro";
+import ContactCTA from "../../components/ContactCTA.astro";
+import Skills from "../../components/Skills.astro";
 import Programs from "@components/Programs.section.astro";
 import Features from "@components/Features.section.astro";
 import AboutUs from "@components/AboutUs.section.astro";
@@ -24,7 +24,7 @@ import SocialProof from "@components/SocialProof.section.astro";
 import Pricing from "@components/Pricing.section.astro";
 import i18next, { t, changeLanguage } from "i18next";
 
-changeLanguage("en");
+changeLanguage("es");
 
 // Content Fetching: List four most recent work projects
 const projects = (await getCollection("work"))

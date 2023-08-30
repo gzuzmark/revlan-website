@@ -3,6 +3,9 @@ import Icon, { Props as IconProps } from "./Icon.astro";
 import ThemeToggle from "./ThemeToggle.astro";
 import logo from "../../public/assets/revlan-logo.svg";
 import LinkOrButton from "./ui/LinkOrButton.astro";
+import { localizePath } from "astro-i18next";
+import i18next from "i18next";
+import { LanguageSelector } from "astro-i18next/components";
 
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
@@ -79,6 +82,16 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
           Contact Us
           <Icon icon="airplane" size="1.2em" />
         </LinkOrButton>
+      </li>
+      <li>
+        <!-- <div class="flex mx-auto rounded overflow-hidden mt-6">
+          <button
+            id="btn-usd"
+            class="py-1 px-4 bg-purple text-white focus:outline-none">EN</button
+          >
+          <button id="btn-pen" class="py-1 px-4 focus:outline-none">ES</button>
+        </div> -->
+        <LanguageSelector showFlag={true} class="my-select-class" />
       </li>
     </ul>
 
@@ -158,6 +171,19 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
       navItem.classList.add("active");
     });
   });
+
+  const btnUsd = document.getElementById("btn-usd");
+  const btnPen = document.getElementById("btn-pen");
+
+  btnUsd.addEventListener("click", () => {
+    i18next.changeLanguage("en");
+    toggleButtonClasses(btnUsd);
+  });
+
+  btnPen.addEventListener("click", () => {
+    updatePrices("es");
+    toggleButtonClasses(btnPen);
+  });
 </script>
 
 <style>
@@ -167,6 +193,14 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
     font-family: var(--font-brand);
     font-weight: 500;
     margin-bottom: 0rem;
+  }
+
+  .my-select-class option.english::before {
+    content: "🇺🇸";
+  }
+
+  .my-select-class option.spanish::before {
+    content: "🇪🇸";
   }
 
   .menu-header {
@@ -326,7 +360,7 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
       left: -5.5rem;
       /* z-index: -1;  */
       padding-left: 8.5rem;
-      width: 60rem;
+      width: 65rem;
       align-items: center;
     }
 
