@@ -6,10 +6,12 @@ import astroI18next from "astro-i18next";
 import nodejs from "@astrojs/node";
 import svelte from "@astrojs/svelte";
 
-import node from "@astrojs/node";
+import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 export default defineConfig({
+  output: "hybrid",
+  adapter: vercel(),
   integrations: [
     tailwind(),
     image({
