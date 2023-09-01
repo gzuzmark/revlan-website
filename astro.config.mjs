@@ -12,12 +12,15 @@ import node from "@astrojs/node";
 export default defineConfig({
   output: "hybrid",
   adapter: node({
-    mode: "standalone"
+    mode: "standalone",
   }),
-  experimental: {
-    hybridOutput: true
-  },
-  integrations: [tailwind(), image({
-    serviceEntryPoint: "@astrojs/image/sharp"
-  }), sitemap(), svelte(), astroI18next()]
+  integrations: [
+    tailwind(),
+    image({
+      serviceEntryPoint: "@astrojs/image/sharp",
+    }),
+    sitemap(),
+    svelte(),
+    astroI18next(),
+  ],
 });
