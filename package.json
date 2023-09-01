@@ -19,7 +19,6 @@
     "@fontsource/rubik": "^4.5.14",
     "astro": "^2.5.7",
     "astro-i18next": "1.0.0-beta.21",
-    "country-flag-emoji-polyfill": "^0.1.4",
     "i18next": "^22.4.10",
     "i18next-fs-backend": "^2.1.5",
     "svelte": "^3.54.0",
