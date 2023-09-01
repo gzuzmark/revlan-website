@@ -2,7 +2,8 @@
 import ContactForm from "./ContactForm.astro";
 import Icon from "./Icon.astro";
 import LinkOrButton from "./ui/LinkOrButton.astro";
-import Link from "./ui/LinkOrButton.astro";
+import { t } from "i18next";
+import { Trans } from "astro-i18next/components";
 ---
 
 <section
@@ -13,12 +14,15 @@ import Link from "./ui/LinkOrButton.astro";
       class="lg:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md">
       <h1
         class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
-        Contact Us!
+        {t("home.contactUs.title")}
       </h1>
       <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
-        Get in touch with our english methodology and <span class="text-primary"
-          >explore more about edutainment with Revlan.</span
-        >
+        <Trans i18nKey="home.contactUs.text">
+          Get in touch with our english methodology and <span
+            class="text-primary"
+            >explore more about edutainment with Revlan.</span
+          >
+        </Trans>
       </p>
       <ContactForm>
         <LinkOrButton

@@ -3,6 +3,14 @@
     "title": "My awesome website!",
     "description": "Here is the description of my awesome website!"
   },
+  "menu": {
+    "item1": "¿Cómo funciona?",
+    "item2": "Nosotros",
+    "item3": "Programas",
+    "item4": "Reserva ahora",
+    "item5": "Precios",
+    "item6": "Contáctanos"
+  },
   "home": {
     "title": "Experimenta el poder del <1>Edutainment</1>  con REVLAN.",
     "subtitle": "Revolutionary Language Learning for Kids",
@@ -51,26 +59,77 @@
       "section-title": "TESTIMONIOS",
       "main-title": "¡Descubre lo que dicen nuestros clientes satisfechos!",
       "text": "Lee nuestras reseñas para saber por qué puedes confiar en nosotros.",
-      "second-title": "Our Alliances for a <0>Brighter Future!</0>"
+      "second-title": "¡Nuestras alianzas para <0>un futuro mejor!</0>",
+      "testimony1": "“Cómo educadora y madre de una niña de 6 años  estoy muy feliz de encontrar a los chicos de revlan Perú  ellos han innovado la forma de aprender un segundo idioma en este caso el inglés  de forma dinámica , divertida y dosificada para niños y jóvenes. Camilu es feliz en los shows por qué de forma natural sin presiones  disfrutan y aprenden. También lo que me encantó es la responsabilidad social del proyecto brindando una parte de las ganancias a un caso social. Los super recomiendo !” - ",
+      "testimony2": "“Yo recomiendo REVLAN porque los chicos Benja y Sara aplican como estrategia los Shows para que los niños aprendan inglés de manera entretenida y divertida. Mi hijo muy contento con el programa, se divierte, conoce amigos de diferentes lugares del Peru y el mundo; ademas conoce culturas de otros países,  interactúan con personas del extranjero. Y lo más importante aprende el idioma.”",
+      "testimony3": "“Estoy feliz con el método de enseñanza que tienen con los niños, me recomendaron estos shows y de verdad no me arrepiento para nada, todo lo contrario, mi hijo está feliz de aprender cada día Inglés con esta metodología divertida, Gracias Benja y Sarah, los súper recomiendo”"
     },
     "pricing": {
-      "section-title": "PRICING",
-      "main-title": "<0>Price Your Fun:</0> Get Ready for the Show!",
-      "text": "Choose the perfect package to make your show experience unforgettable.",
+      "section-title": "PRECIOS",
+      "main-title": "<0>Ajusta el precio a tu diversión:</0> ¡Prepárate para el espectáculo!",
+      "per-text": "por niño",
+      "text": "Elige el paquete perfecto para hacer de tu experiencia en el show algo inolvidable.",
       "second-title": "Our Alliances for a <0>Brighter Future!</0>",
       "features-title": "Digital products",
       "features": {
-        "1": "Travel itinerary",
-        "2": "Continue the Fun Activity Book",
-        "3": "Printable passport",
-        "4": "Certification of Completion"
+        "1": "Itinerario de Viaje",
+        "2": "Libro de actividades",
+        "3": "Pasaporte Imprimible",
+        "4": "Certificado de Participación"
       },
+      "subtitle": "Productos Digitales",
       "package1": {
         "price": "<0>$7</0> <1>/por niño/a</1>",
         "title": "Tourist",
-        "type": "(Single show)",
-        "main": "A single show ticket"
-      }
+        "type": "(Show único)",
+        "main": "Ticket para 1 show"
+      },
+      "package2": {
+        "price": "<0>$7</0> <1>/por niño/a</1>",
+        "title": "Tourist",
+        "type": "(Programa parcial)",
+        "main": "Ticket para 4 shows"
+      },
+      "package3": {
+        "price": "<0>$7</0> <1>/por niño/a</1>",
+        "title": "Tourist",
+        "type": "(Show único)",
+        "main": "Ticket para 8 shows + Productos Digitales"
+      },
+      "footer-text": "¿Eres un instituto, organización o escuela interesada en traer este programa a tu grupo de niños?",
+      "footer-h1": "¡Contáctanos para obtener un <0>paquete especial</0>",
+      "footer-h2": "para tu grupo y crear una experiencia inolvidable!"
+    },
+    "booknow": {
+      "section": "¡RESERVA AHORA!",
+      "title": "<0>¡Reserva tu lugar ahora mismo!</0>",
+      "subtitle": "¡Los asientos se llenan rápidamente!",
+      "text": "¡Reserva ahora! Hay un número limitado de lugares disponibles y no querrás perder la oportunidad de ahorrar en una entrada para nuestro programa.",
+      "cta": "Reservar el show ahora"
+    },
+    "contactUs": {
+      "title": "¡Contáctanos!",
+      "text": "Ponte en contacto con nuestra metodología en inglés y <0>explora más sobre entretenimiento educativo con Revlan.</0>"
     }
+  },
+  "footer": {
+    "title": "Revolucionar los lenguajes",
+    "text": "Aprendizaje revolucionario para niños"
+  },
+  "confirmation": {
+    "greeting": "¡estás cerca del Tour!",
+    "text": "Hemos recibido exitosamente tu información, pronto podrás viajar virtualmente y aprender inglés de una manera divertida, fácil y didáctica.",
+    "cta": "¡Vamoooos al inicio!"
+  },
+  "contactUs": {
+    "title": "¡Contáctanos!",
+    "text": "Conéctate con nuestra metodología de inglés y descubre más sobre el edutainment.",
+    "cta": "¡Contáctanos hoy mismo!"
+  },
+  "errorPage": {
+    "title": "¡Aprendamos de <0>nuestros errores</0> y sigamos adelante!",
+    "subtitle": "<0>Error 404</0> - ¡Ups! Has llegado a una página sin salida.",
+    "text": "No nos quedemos atascados en nuestros errores y en su lugar, aprovechemos esta oportunidad para aprender algo nuevo. Descubre más sobre REVLAN para dar el siguiente paso en tu aprendizaje de inglés.",
+    "cta": "¡Vamoooos al Inicio!"
   }
 }

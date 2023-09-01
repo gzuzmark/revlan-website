@@ -1,6 +1,8 @@
 ---
 import Icon from "./Icon.astro";
 import Link from "./ui/LinkOrButton.astro";
+import { t } from "i18next";
+import { Trans } from "astro-i18next/components";
 ---
 
 <section id="book" class="text-gray-600 body-font with-background">
@@ -10,16 +12,17 @@ import Link from "./ui/LinkOrButton.astro";
       class="lg:flex-grow md:w-1/2 lg:pr-12 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
       <h2
         class="text-xs text-black tracking-widest font-medium title-font mb-1">
-        BOOK NOW
+        {t("home.booknow.section")}
       </h2>
       <h1
         class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
-        <span class="text-primary">Book your spot now</span>
-        <br class="hidden lg:inline-block" />seats are filling up fast!
+        <Trans i18nKey="home.booknow.title">
+          <span class="text-primary">Book your spot now</span>
+        </Trans>
+        <br class="hidden lg:inline-block" />{t("home.booknow.subtitle")}
       </h1>
       <p class="mb-8 leading-relaxed">
-        Book now! There are a limited number of spots available and you don't
-        want to miss the chance to save for a show.
+        {t("home.booknow.text")}
       </p>
       <div class="flex justify-center">
         <Link
@@ -27,7 +30,7 @@ import Link from "./ui/LinkOrButton.astro";
           target="_self"
           class="flex gap-1 items-center justify-center"
           rel="noopener">
-          Book for a show now
+          {t("home.booknow.cta")}
           <Icon icon="calendar" size="1.2em" />
         </Link>
       </div>

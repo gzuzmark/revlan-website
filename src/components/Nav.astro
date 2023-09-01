@@ -6,14 +6,16 @@ import LinkOrButton from "./ui/LinkOrButton.astro";
 import { localizePath } from "astro-i18next";
 import i18next from "i18next";
 import { LanguageSelector } from "astro-i18next/components";
+import { t } from "i18next";
+import { Trans } from "astro-i18next/components";
 
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
-  { label: "How it works", href: "howitworks" },
-  { label: "About Us", href: "about" },
-  { label: "Programs", href: "programs" },
-  { label: "Book now", href: "book" },
-  { label: "Pricing", href: "pricing" },
+  { label: t("menu.item1"), href: "howitworks" },
+  { label: t("menu.item2"), href: "about" },
+  { label: t("menu.item3"), href: "programs" },
+  { label: t("menu.item4"), href: "book" },
+  { label: t("menu.item5"), href: "pricing" },
 ];
 
 /** Icon links to social media — edit these with links to your profiles! */
@@ -79,7 +81,7 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
           style="primary"
           href="#contact"
           class="flex gap-1 items-center justify-center">
-          Contact Us
+          {t("menu.item6")}
           <Icon icon="airplane" size="1.2em" />
         </LinkOrButton>
       </li>
@@ -190,7 +192,7 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
   nav {
     z-index: 9999;
     position: relative;
-    font-family: var(--font-brand);
+    font-family: "Twemoji Country Flags", var(--font-brand);
     font-weight: 500;
     margin-bottom: 0rem;
   }

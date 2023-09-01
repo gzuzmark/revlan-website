@@ -9,136 +9,143 @@ import Footer from "../components/Footer.astro";
 import Footer2 from "@components/Footer2.astro";
 
 interface Props {
-    title?: string | undefined;
-    description?: string | undefined;
+  title?: string | undefined;
+  description?: string | undefined;
 }
 
 const { title, description } = Astro.props;
 ---
 
 <html lang="en">
-    <head>
-        <MainHead title={title} description={description} />
-    </head>
-    <body>
-        <div class="stack backgrounds flex flex-col">
-            <Nav />
-            <slot />
-            <Footer2 />
-        </div>
+  <head>
+    <MainHead title={title} description={description} />
+  </head>
+  <body>
+    <div class="stack backgrounds flex flex-col">
+      <Nav />
+      <slot />
+      <div
+        class="container mx-auto flex px-5 items-center justify-center flex-col">
+        <img
+          class="object-cover object-center rounded"
+          alt="hero"
+          src="/assets/revlan-world-head.svg"
+        />
+      </div>
 
-        <script>
-            document.addEventListener("DOMContentLoaded", () => {
-                // Add “loaded” class once the document has completely loaded.
-                addEventListener("load", () =>
-                    document.documentElement.classList.add("loaded")
-                );
-                const sections = document.querySelectorAll("[data-anchor]");
+      <Footer2 />
+    </div>
 
-                const body = document.querySelector("body");
-                const page = document.body;
-                const header = document.querySelector("nav") as HTMLElement;
+    <script>
+      import { polyfillCountryFlagEmojis } from "https://cdn.skypack.dev/country-flag-emoji-polyfill";
+      polyfillCountryFlagEmojis();
 
-                page.addEventListener("scroll", function () {
-                    let nav = document.getElementById("nav");
-                    let firstSection = document.getElementById("howitworks");
-                    let firstSectionPosition =
-                        firstSection?.getBoundingClientRect().top;
+      document.addEventListener("DOMContentLoaded", () => {
+        // Add “loaded” class once the document has completely loaded.
+        addEventListener("load", () =>
+          document.documentElement.classList.add("loaded")
+        );
+        const sections = document.querySelectorAll("[data-anchor]");
 
-                    let scrollTop =
-                        document.documentElement.scrollTop ||
-                        document.body.scrollTop;
+        const body = document.querySelector("body");
+        const page = document.body;
+        const header = document.querySelector("nav") as HTMLElement;
 
-                    if (firstSectionPosition - scrollTop < 0) {
-                        header!.style.position = "sticky";
-                        header!.style.top = "0";
-                    } else {
-                        header!.style.position = "static";
-                    }
-                });
-            });
-        </script>
+        page.addEventListener("scroll", function () {
+          let nav = document.getElementById("nav");
+          let firstSection = document.getElementById("howitworks");
+          let firstSectionPosition = firstSection?.getBoundingClientRect().top;
 
-        <style>
-            :root {
-                --_placeholder-bg: linear-gradient(transparent, transparent);
-                --bg-image-main: url("/assets/backgrounds/bg-main-light-800w.jpg");
-                --bg-image-main-curves: url("/assets/backgrounds/bg-main-light.svg");
-                --bg-image-main-rainbow: url("/assets/backgrounds/bg-rainbow-secondary-layout.svg");
-                --bg-image-secondary-rainbow: url("/assets/backgrounds/bg-secondary-rainbow.svg");
-                --bg-image-subtle-1: var(--_placeholder-bg);
-                --bg-image-subtle-2: var(--_placeholder-bg);
-                --bg-image-footer: var(--_placeholder-bg);
-                --bg-svg-blend-mode: overlay;
-                --bg-blend-mode: darken;
-                --bg-image-aspect-ratio: 2.25;
-                --bg-scale: 1.68;
-                --bg-aspect-ratio: calc(
-                    var(--bg-image-aspect-ratio) / var(--bg-scale)
-                );
-                --bg-gradient-size: calc(var(--bg-scale) * 100%);
-            }
+          let scrollTop =
+            document.documentElement.scrollTop || document.body.scrollTop;
 
-            :root.theme-dark {
-                --bg-image-main: url("/assets/backgrounds/bg-main-dark-800w.jpg");
-                --bg-image-main-curves: url("/assets/backgrounds/bg-main-dark.svg");
-                --bg-svg-blend-mode: darken;
-                --bg-blend-mode: lighten;
-            }
+          if (firstSectionPosition - scrollTop < 0) {
+            header!.style.position = "sticky";
+            header!.style.top = "0";
+          } else {
+            header!.style.position = "static";
+          }
+        });
+      });
+    </script>
 
-            /* These backgrounds are displayed below the fold, so we lazy load them
+    <style>
+      :root {
+        --_placeholder-bg: linear-gradient(transparent, transparent);
+        --bg-image-main: url("/assets/backgrounds/bg-main-light-800w.jpg");
+        --bg-image-main-curves: url("/assets/backgrounds/bg-main-light.svg");
+        --bg-image-main-rainbow: url("/assets/backgrounds/bg-rainbow-secondary-layout.svg");
+        --bg-image-secondary-rainbow: url("/assets/backgrounds/bg-secondary-rainbow.svg");
+        --bg-image-subtle-1: var(--_placeholder-bg);
+        --bg-image-subtle-2: var(--_placeholder-bg);
+        --bg-image-footer: var(--_placeholder-bg);
+        --bg-svg-blend-mode: overlay;
+        --bg-blend-mode: darken;
+        --bg-image-aspect-ratio: 2.25;
+        --bg-scale: 1.68;
+        --bg-aspect-ratio: calc(var(--bg-image-aspect-ratio) / var(--bg-scale));
+        --bg-gradient-size: calc(var(--bg-scale) * 100%);
+      }
+
+      :root.theme-dark {
+        --bg-image-main: url("/assets/backgrounds/bg-main-dark-800w.jpg");
+        --bg-image-main-curves: url("/assets/backgrounds/bg-main-dark.svg");
+        --bg-svg-blend-mode: darken;
+        --bg-blend-mode: lighten;
+      }
+
+      /* These backgrounds are displayed below the fold, so we lazy load them
 			   once the `.loaded` class has been set.  */
-            :root.loaded {
-                --bg-image-subtle-1: url("/assets/backgrounds/bg-subtle-1-light-800w.jpg");
-                --bg-image-subtle-2: url("/assets/backgrounds/bg-subtle-2-light-800w.jpg");
-                --bg-image-footer: url("/assets/backgrounds/bg-footer-light-800w.jpg");
-            }
-            :root.loaded.theme-dark {
-                --bg-image-subtle-1: url("/assets/backgrounds/bg-subtle-1-dark-800w.jpg");
-                --bg-image-subtle-2: url("/assets/backgrounds/bg-subtle-2-dark-800w.jpg");
-                --bg-image-footer: url("/assets/backgrounds/bg-footer-dark-800w.jpg");
-            }
+      :root.loaded {
+        --bg-image-subtle-1: url("/assets/backgrounds/bg-subtle-1-light-800w.jpg");
+        --bg-image-subtle-2: url("/assets/backgrounds/bg-subtle-2-light-800w.jpg");
+        --bg-image-footer: url("/assets/backgrounds/bg-footer-light-800w.jpg");
+      }
+      :root.loaded.theme-dark {
+        --bg-image-subtle-1: url("/assets/backgrounds/bg-subtle-1-dark-800w.jpg");
+        --bg-image-subtle-2: url("/assets/backgrounds/bg-subtle-2-dark-800w.jpg");
+        --bg-image-footer: url("/assets/backgrounds/bg-footer-dark-800w.jpg");
+      }
 
-            @media (min-width: 50em) {
-                :root {
-                    --bg-scale: 1;
-                    --bg-image-main: url("/assets/backgrounds/bg-main-light-1440w.jpg");
-                }
-                :root.theme-dark {
-                    --bg-image-main: url("/assets/backgrounds/bg-main-dark-1440w.jpg");
-                }
+      @media (min-width: 50em) {
+        :root {
+          --bg-scale: 1;
+          --bg-image-main: url("/assets/backgrounds/bg-main-light-1440w.jpg");
+        }
+        :root.theme-dark {
+          --bg-image-main: url("/assets/backgrounds/bg-main-dark-1440w.jpg");
+        }
 
-                :root.loaded {
-                    --bg-image-subtle-1: url("/assets/backgrounds/bg-subtle-1-light-1440w.jpg");
-                    --bg-image-subtle-2: url("/assets/backgrounds/bg-subtle-2-light-1440w.jpg");
-                    --bg-image-footer: url("/assets/backgrounds/bg-footer-light-1440w.jpg");
-                }
-                :root.loaded.theme-dark {
-                    --bg-image-subtle-1: url("/assets/backgrounds/bg-subtle-1-dark-1440w.jpg");
-                    --bg-image-subtle-2: url("/assets/backgrounds/bg-subtle-2-dark-1440w.jpg");
-                    --bg-image-footer: url("/assets/backgrounds/bg-footer-dark-1440w.jpg");
-                }
-            }
+        :root.loaded {
+          --bg-image-subtle-1: url("/assets/backgrounds/bg-subtle-1-light-1440w.jpg");
+          --bg-image-subtle-2: url("/assets/backgrounds/bg-subtle-2-light-1440w.jpg");
+          --bg-image-footer: url("/assets/backgrounds/bg-footer-light-1440w.jpg");
+        }
+        :root.loaded.theme-dark {
+          --bg-image-subtle-1: url("/assets/backgrounds/bg-subtle-1-dark-1440w.jpg");
+          --bg-image-subtle-2: url("/assets/backgrounds/bg-subtle-2-dark-1440w.jpg");
+          --bg-image-footer: url("/assets/backgrounds/bg-footer-dark-1440w.jpg");
+        }
+      }
 
-            .backgrounds {
-                min-height: 100%;
-                isolation: isolate;
-                background:
+      .backgrounds {
+        min-height: 100%;
+        isolation: isolate;
+        background:
          /*header1*/ var(--bg-image-main-rainbow) top
-                    center/var(--bg-gradient-size) no-repeat;
-                background-blend-mode: /*noise*/ overlay,
-                    /*footer*/ var(--bg-blend-mode),
-                    /*header1*/ var(--bg-svg-blend-mode), /*header2*/ normal,
-                    /*base*/ normal;
-            }
-            @media (forced-colors: active) {
-                /* Deactivate custom backgrounds for high contrast users. */
-                .backgrounds {
-                    background: none;
-                    background-blend-mode: none;
-                    --bg-gradient-size: none;
-                }
-            }
-        </style>
-    </body>
+          center/var(--bg-gradient-size) no-repeat;
+        background-blend-mode: /*noise*/ overlay,
+          /*footer*/ var(--bg-blend-mode), /*header1*/ var(--bg-svg-blend-mode),
+          /*header2*/ normal, /*base*/ normal;
+      }
+      @media (forced-colors: active) {
+        /* Deactivate custom backgrounds for high contrast users. */
+        .backgrounds {
+          background: none;
+          background-blend-mode: none;
+          --bg-gradient-size: none;
+        }
+      }
+    </style>
+  </body>
 </html>

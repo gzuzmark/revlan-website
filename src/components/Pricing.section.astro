@@ -38,7 +38,7 @@ import { Trans } from "astro-i18next/components";
             <Trans i18nKey="home.pricing.package1.price">
               <span>$7</span>
               <span class="text-lg ml-1 font-normal text-gray-500"
-                >/per child</span
+                >{t("home.pricing.per-text")}</span
               >
             </Trans>
           </h1>
@@ -103,13 +103,16 @@ import { Trans } from "astro-i18next/components";
             class="price text-5xl text-gray-900 leading-none flex items-center pb-4">
             <span>$18</span>
             <span class="text-lg ml-1 font-normal text-gray-500"
-              >/per child</span
+              >{t("home.pricing.per-text")}</span
             >
           </h1>
           <h2
             class="text-sm tracking-widest title-font mb-1 font-medium border-b border-gray-200">
-            Travel Camp <br />
-            <span class="ml-1 font-normal text-gray-600">(Half Tour)</span>
+            {t("home.pricing.package2.title")}
+            <br />
+            <span class="ml-1 font-normal text-gray-600"
+              >{t("home.pricing.package2.type")}</span
+            >
           </h2>
           <p class="flex items-center text-gray-600 mb-2">
             <span
@@ -124,35 +127,35 @@ import { Trans } from "astro-i18next/components";
                 viewBox="0 0 24 24">
                 <path d="M20 6L9 17l-5-5"></path>
               </svg>
-            </span>Package of 4 shows
+            </span>{t("home.pricing.package2.main")}
           </p>
           <div>
             <h2 class="text-sm tracking-widest title-font mb-1 font-medium">
-              Digital products
+              {t("home.pricing.subtitle")}
             </h2>
             <p class="flex items-center text-gray-600 mb-2">
               <span
                 class="w-4 h-4 mr-2 inline-flex items-center justify-center text-gray-200 rounded-full flex-shrink-0">
                 <Icon icon="x-circle" size="1.2em" />
-              </span>Travel itinerary
+              </span>{t("home.pricing.features.1")}
             </p>
             <p class="flex items-center text-gray-600 mb-2">
               <span
                 class="w-4 h-4 mr-2 inline-flex items-center justify-center text-gray-200 rounded-full flex-shrink-0">
                 <Icon icon="x-circle" size="1.2em" />
-              </span>Continue the Fun Activity Book
+              </span>{t("home.pricing.features.2")}
             </p>
             <p class="flex items-center text-gray-600 mb-2">
               <span
                 class="w-4 h-4 mr-2 inline-flex items-center justify-center text-gray-200 rounded-full flex-shrink-0">
                 <Icon icon="x-circle" size="1.2em" />
-              </span>Printable passport
+              </span>{t("home.pricing.features.3")}
             </p>
             <p class="flex items-center text-gray-600 mb-2">
               <span
                 class="w-4 h-4 mr-2 inline-flex items-center justify-center text-gray-200 rounded-full flex-shrink-0">
                 <Icon icon="x-circle" size="1.2em" />
-              </span>Certification of Completion
+              </span>{t("home.pricing.features.4")}
             </p>
           </div>
         </div>
@@ -175,12 +178,13 @@ import { Trans } from "astro-i18next/components";
             class="price text-5xl text-gray-900 leading-none flex items-center pb-4">
             <span>$40</span>
             <span class="text-lg ml-1 font-normal text-gray-500"
-              >/per child</span
+              >{t("home.pricing.per-text")}</span
             >
           </h1>
           <h2
             class="text-sm tracking-widest title-font mb-1 font-medium border-b border-gray-200">
-            Travel Camp <br />
+            {t("home.pricing.package3.type")}
+            <br />
             <span class="ml-1 font-normal text-gray-600">(Full Tour)</span>
           </h2>
           <p class="flex items-center text-gray-600 mb-2">
@@ -196,35 +200,35 @@ import { Trans } from "astro-i18next/components";
                 viewBox="0 0 24 24">
                 <path d="M20 6L9 17l-5-5"></path>
               </svg>
-            </span>Package of 8 shows + Digital products
+            </span>{t("home.pricing.package3.main")}
           </p>
           <div>
             <h2 class="text-sm tracking-widest title-font mb-1 font-medium">
-              Digital products
+              {t("home.pricing.subtitle")}
             </h2>
             <p class="flex items-center text-gray-600 mb-2">
               <span
                 class="w-4 h-4 mr-2 inline-flex items-center justify-center text-cyan-400 rounded-full flex-shrink-0">
                 <Icon icon="check-circle" size="1.2em" />
-              </span>Travel itinerary
+              </span>{t("home.pricing.features.1")}
             </p>
             <p class="flex items-center text-gray-600 mb-2">
               <span
                 class="w-4 h-4 mr-2 inline-flex items-center justify-center text-cyan-400 rounded-full flex-shrink-0">
                 <Icon icon="check-circle" size="1.2em" />
-              </span>Continue the Fun Activity Book
+              </span>{t("home.pricing.features.2")}
             </p>
             <p class="flex items-center text-gray-600 mb-2">
               <span
                 class="w-4 h-4 mr-2 inline-flex items-center justify-center text-cyan-400 rounded-full flex-shrink-0">
                 <Icon icon="check-circle" size="1.2em" />
-              </span>Printable passport
+              </span>{t("home.pricing.features.3")}
             </p>
             <p class="flex items-center text-gray-600 mb-2">
               <span
                 class="w-4 h-4 mr-2 inline-flex items-center justify-center text-cyan-400 rounded-full flex-shrink-0">
                 <Icon icon="check-circle" size="1.2em" />
-              </span>Certification of Completion
+              </span>{t("home.pricing.features.4")}
             </p>
           </div>
         </div>
@@ -232,16 +236,17 @@ import { Trans } from "astro-i18next/components";
     </div>
     <div class="flex flex-col text-center w-full">
       <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500">
-        Are you an institute, organization, or school looking to bring this
-        program to your group of children?
+        {t("home.pricing.footer-text")}
       </p>
       <h1
         class="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900">
-        Contact us to get a <span class="text-primary">special package</span>
+        <Trans i18nKey="home.pricing.footer-h1">
+          Contact us to get a <span class="text-primary">special package</span>
+        </Trans>
       </h1>
       <h2
         class="text-xs text-black tracking-widest font-medium title-font mb-1">
-        for your group and create an unforgettable experience
+        {t("home.pricing.footer-h2")}
       </h2>
     </div>
     <div class="grid w-full max-w-5xl relative">

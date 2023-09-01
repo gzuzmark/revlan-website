@@ -11,7 +11,9 @@ import { Trans } from "astro-i18next/components";
         {t("home.reviews.section-title")}
       </h2>
       <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900">
-        {t("home.reviews.main-title")}
+        <Trans i18nKey="home.reviews.main-title">
+          See What Our <span class="text-primary">Traveler s moms</span> Are Saying!
+        </Trans>
       </h1>
       <h2 class="text-xs tracking-widest font-medium title-font mb-1">
         {t("home.reviews.text")}
@@ -26,13 +28,7 @@ import { Trans } from "astro-i18next/components";
             src="/assets/testimony-1.png"
           />
           <p class="leading-relaxed">
-            “As an educator and mother of a 6 year old girl, I am very happy to
-            find the kids of Revlan Peru. They have innovated the way of
-            learning a second language, in this case English, in a dynamic, fun
-            and dosed way for children and young people. Camilu is happy in the
-            shows because they enjoy and learn naturally without pressures. What
-            I also loved is the social responsibility of the project, providing
-            part of the profits to a social case. I highly recommend them!”
+            {t("home.reviews.testimony1")}
           </p>
           <span class="inline-block h-1 w-10 rounded bg-red-500 mt-6 mb-4"
           ></span>
@@ -51,15 +47,7 @@ import { Trans } from "astro-i18next/components";
             src="/assets/testimony-2.png"
           />
           <p class="leading-relaxed">
-            “I am very happy and grateful for the innovative REVLAN Initiative
-            directed by young Sarah and Benja who teach English to children
-            through Interactive Shows. Particularly my 6 year old daughter is
-            not only learning the correct pronunciation of English but also
-            having fun with other children from different parts of the country
-            and the world. The shows are full of games that are super dynamic
-            and where the children enjoy learning another language. There are no
-            children with fear or shyness, only happy children is perceived.
-            That is why I recommend REVLAN.”
+            {t("home.reviews.testimony2")}
           </p>
           <span class="inline-block h-1 w-10 rounded bg-red-500 mt-6 mb-4"
           ></span>
@@ -78,11 +66,7 @@ import { Trans } from "astro-i18next/components";
             src="/assets/testimony-3.png"
           />
           <p class="leading-relaxed">
-            “I'm so happy with the teaching method they have with the kids, they
-            recommended these shows to me and I really don't regret it at all,
-            quite the opposite, my son is very happy to learn English every day
-            with this fun methodology, Thanks Benja and Sarah, I strongly
-            recommend them!”
+            {t("home.reviews.testimony3")}
           </p>
           <span class="inline-block h-1 w-10 rounded bg-red-500 mt-6 mb-4"
           ></span>
@@ -96,7 +80,7 @@ import { Trans } from "astro-i18next/components";
     </div>
     <div class="flex flex-col text-center w-full mb-20">
       <h2 class="sm:text-3xl text-2xl font-medium title-font text-gray-900">
-        <Trans i18nKey="home.aboutus.second-title">
+        <Trans i18nKey="home.reviews.second-title">
           Our Alliances for a <span class="text-primary">Brighter Future!</span>
         </Trans>
       </h2>
