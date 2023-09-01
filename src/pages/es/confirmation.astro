@@ -11,6 +11,7 @@ changeLanguage("es");
 const url = new URL(Astro.request.url);
 const params = new URLSearchParams(url.search);
 const userName = params.get("name");
+console.log(url);
 ---
 
 <SecondaryLayout
