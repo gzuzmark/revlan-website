@@ -4,46 +4,47 @@ import SecondaryLayout from "layouts/SecondaryLayout.astro";
 import Hero from "../components/Hero.astro";
 import LinkOrButton from "@components/ui/LinkOrButton.astro";
 import Icon from "@components/Icon.astro";
+import { t, changeLanguage } from "i18next";
+import { Trans } from "astro-i18next/components";
 
 changeLanguage("en");
 ---
 
 <SecondaryLayout
-    title="Not Found"
-    description="404 Error — this page was not found">
-    <main class="text-gray-600 body-font flex-grow">
-        <section class="text-gray-600 body-font">
-            <div
-                class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
-                <img
-                    class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded"
-                    alt="hero"
-                    src="/assets/kids-pencil-travel-revlan.svg"
-                />
-                <div class="text-center lg:w-2/3 w-full">
-                    <h1
-                        class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
-                        <span class="text-primary">Great!</span>, you’re close
-                        for the Tour!
-                    </h1>
+  title="Not Found"
+  description="404 Error — this page was not found">
+  <main class="text-gray-600 body-font flex-grow">
+    <section class="text-gray-600 body-font">
+      <div
+        class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+        <img
+          class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded"
+          alt="hero"
+          src="/assets/kids-pencil-travel-revlan.svg"
+        />
+        <div class="text-center lg:w-2/3 w-full">
+          <h1
+            class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
+            <span class="text-primary">Great!</span>,{
+              t("confirmation.greeting")
+            }
+          </h1>
 
-                    <p class="mb-8 leading-relaxed text-center">
-                        We have successfully received your info, soon you will
-                        be able to virtually travel and learn English in a fun,
-                        easy and didactic way.
-                    </p>
-                    <div class="flex justify-center">
-                        <LinkOrButton
-                            href="/"
-                            target="_self"
-                            class="flex gap-1 items-center justify-center"
-                            rel="noopener">
-                            Let’s Goooo Home
-                            <Icon icon="arrow-right" size="1.2em" />
-                        </LinkOrButton>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+          <p class="mb-8 leading-relaxed text-center">
+            {t("confirmation.text")}
+          </p>
+          <div class="flex justify-center">
+            <LinkOrButton
+              href="/"
+              target="_self"
+              class="flex gap-1 items-center justify-center"
+              rel="noopener">
+              {t("confirmation.cta")}
+              <Icon icon="arrow-right" size="1.2em" />
+            </LinkOrButton>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </SecondaryLayout>
