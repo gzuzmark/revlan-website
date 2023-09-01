@@ -28,8 +28,7 @@
       </h1>
       <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
         Get in touch with our english methodology and <span class="text-primary"
-          >explore more about edutainment with Revlan.</span
-        >span>
+          >explore more about edutainment with Revlan.</span>
       </p>
       <ContactForm />
     </div>

@@ -109,7 +109,8 @@
     },
     "contactUs": {
       "title": "¡Contáctanos!",
-      "text": "Ponte en contacto con nuestra metodología en inglés y <0>explora más sobre entretenimiento educativo con Revlan.</0>"
+      "text": "Ponte en contacto con nuestra metodología en inglés y <0>explora más sobre entretenimiento educativo con Revlan.</0>",
+      "cta": "¡Contáctanos hoy mismo!"
     }
   },
   "footer": {

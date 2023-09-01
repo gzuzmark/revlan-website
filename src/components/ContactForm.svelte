@@ -23,6 +23,7 @@
 
     const formData = new FormData(form);
     const object = Object.fromEntries(formData);
+    const name = object.name || "Hi!";
 
     isSending = true;
 
@@ -38,7 +39,7 @@
         let json = await response.json();
         if (response.status == 200) {
           isSending = false;
-          location.href = "/confirmation";
+          location.href = `/confirmation?name=${name}`;
         } else {
           console.log(response);
           result.innerHTML = "Something went wrong!";
