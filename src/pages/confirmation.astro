@@ -1,4 +1,5 @@
 ---
+export const prerender = false;
 import SecondaryLayout from "layouts/SecondaryLayout.astro";
 import Hero from "../components/Hero.astro";
 import LinkOrButton from "@components/ui/LinkOrButton.astro";
@@ -6,6 +7,11 @@ import Icon from "@components/Icon.astro";
 import { t, changeLanguage } from "i18next";
 
 changeLanguage("en");
+
+const url = new URL(Astro.request.url);
+const params = new URLSearchParams(url.search);
+const userName = params.get("name");
+console.log(url);
 ---
 
 <SecondaryLayout
@@ -23,7 +29,7 @@ changeLanguage("en");
         <div class="text-center lg:w-2/3 w-full">
           <h1
             class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
-            <span class="text-primary">Great!</span>,{
+            <span class="text-primary">{userName}</span>,{
               t("confirmation.greeting")
             }
           </h1>

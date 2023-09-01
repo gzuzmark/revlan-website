@@ -131,5 +131,33 @@
     "subtitle": "<0>Error 404</0> - Oops! You've stumbled upon a dead-end page.",
     "text": "Let's not dwell on our errors and instead use this as an opportunity to learn something new. Check out more about REVLAN to help you take the next step in your English journey.",
     "cta": "Let’s Goooo Home"
+  },
+  "form": {
+    "firstName": {
+      "label": "First name",
+      "placeholder": "enter your first name",
+      "error": "Please enter your first name"
+    },
+    "lastName": {
+      "label": "Last name",
+      "placeholder": "enter your last name",
+      "error": "Please enter your last name"
+    },
+    "email": {
+      "label": "Email",
+      "placeholder": "enter your email",
+      "error": "Please fill your email",
+      "valid": "Please use a valid email"
+    },
+    "phone": {
+      "label": "Phone number",
+      "placeholder": "enter your phone number",
+      "error": "Please enter your phone number"
+    },
+    "message": {
+      "label": "Message",
+      "placeholder": "Leave us a message to know more about you...",
+      "error": "Please add a message"
+    }
   }
 }

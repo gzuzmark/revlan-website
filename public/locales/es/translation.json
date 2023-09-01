@@ -13,7 +13,7 @@
   },
   "home": {
     "title": "Experimenta el poder del <1>Edutainment</1>  con REVLAN.",
-    "subtitle": "Revolutionary Language Learning for Kids",
+    "subtitle": "Aprendizaje de idiomas revolucionario para niños",
     "main-cta": "Únete al World Tour ahora",
     "watch-video-cta": "Ver Video",
     "features-title": "¿Cómo funciona?",
@@ -131,5 +131,33 @@
     "subtitle": "<0>Error 404</0> - ¡Ups! Has llegado a una página sin salida.",
     "text": "No nos quedemos atascados en nuestros errores y en su lugar, aprovechemos esta oportunidad para aprender algo nuevo. Descubre más sobre REVLAN para dar el siguiente paso en tu aprendizaje de inglés.",
     "cta": "¡Vamoooos al Inicio!"
+  },
+  "form": {
+    "firstName": {
+      "label": "Nombre",
+      "placeholder": "ingresa tu nombre",
+      "error": "Por favor ingresa tu nombre"
+    },
+    "lastName": {
+      "label": "Apellido",
+      "placeholder": "ingresa tu apellido",
+      "error": "Por favor ingresa tu apellido"
+    },
+    "email": {
+      "label": "Correo electrónico",
+      "placeholder": "ingresa tu correo electrónico",
+      "error": "Por favor llena tu correo electrónico",
+      "valid": "Por favor usa un correo válido"
+    },
+    "phone": {
+      "label": "Número de teléfono",
+      "placeholder": "ingresa tu número de teléfono",
+      "error": "Por favor ingresa tu número de teléfono"
+    },
+    "message": {
+      "label": "Mensaje",
+      "placeholder": "Déjanos un mensaje para saber más sobre ti...",
+      "error": "Por favor agrega un mensaje"
+    }
   }
 }

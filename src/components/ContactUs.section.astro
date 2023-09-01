@@ -68,6 +68,9 @@ form.addEventListener("submit", function (e) {
   const object = Object.fromEntries(formData);
   const json = JSON.stringify(object);
 
+  console.log(form);
+  console.log(object);
+
   button.textContent = "Sending...";
   button.disabled = true;
   fetch("https://api.web3forms.com/submit", {
