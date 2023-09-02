@@ -1,13 +1,10 @@
 ---
 import Icon, { Props as IconProps } from "./Icon.astro";
-import ThemeToggle from "./ThemeToggle.astro";
-import logo from "../../public/assets/revlan-logo.svg";
 import LinkOrButton from "./ui/LinkOrButton.astro";
-import { localizePath } from "astro-i18next";
-import i18next from "i18next";
+
 import { LanguageSelector } from "astro-i18next/components";
 import { t } from "i18next";
-import { Trans } from "astro-i18next/components";
+import { localizePath } from "astro-i18next";
 
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
@@ -40,7 +37,7 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
 
 <nav class="">
   <div class="menu-header">
-    <a href="/" class="site-title">
+    <a href={localizePath("/")} class="site-title">
       <img src="/assets/revlan-logo.svg" alt="hero image" class="max-w-4xl" />
     </a>
     <menu-button>
