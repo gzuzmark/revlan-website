@@ -173,19 +173,6 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
       navItem.classList.add("active");
     });
   });
-
-  const btnUsd = document.getElementById("btn-usd");
-  const btnPen = document.getElementById("btn-pen");
-
-  btnUsd.addEventListener("click", () => {
-    i18next.changeLanguage("en");
-    toggleButtonClasses(btnUsd);
-  });
-
-  btnPen.addEventListener("click", () => {
-    updatePrices("es");
-    toggleButtonClasses(btnPen);
-  });
 </script>
 
 <style>
