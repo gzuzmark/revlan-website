@@ -69,6 +69,8 @@
     type="hidden"
     name="access_key"
     value="075ce13f-266a-46fd-ad56-ca4fbf2a9dbf" />
+  <input type="hidden" name="subject" value="Revlan new contact" />
+  <input type="hidden" name="from_name" value="Revlan website form" />
   <div class="flex flex-wrap -m-2">
     <div class="p-2 w-1/2">
       <div class="relative">
