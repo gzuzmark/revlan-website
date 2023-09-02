@@ -3,6 +3,8 @@ import Icon from "./Icon.astro";
 import Button from "./ui/LinkOrButton.astro";
 import { t } from "i18next";
 import { Trans } from "astro-i18next/components";
+import { localizeUrl } from "astro-i18next";
+const localizedUrl = localizeUrl("/confirmation");
 ---
 
 <form
@@ -114,6 +116,13 @@ import { Trans } from "astro-i18next/components";
     const result = document.getElementById("result");
     const button = document.getElementById("submitBtn");
 
+    function getLangFromUrl(url) {
+      const [, lang] = url.pathname.split("/");
+      console.log(url);
+      console.log(lang);
+      return lang;
+    }
+
     form.addEventListener("submit", function (e) {
       e.preventDefault();
 
@@ -126,7 +135,8 @@ import { Trans } from "astro-i18next/components";
       const object = Object.fromEntries(formData);
       const json = JSON.stringify(object);
 
-      const name = object.name || "Hi!";
+      //const name = object.name || "Hi!";
+      const name = "Hey!";
 
       button.textContent = "Sending...";
       button.disabled = true;
@@ -140,10 +150,12 @@ import { Trans } from "astro-i18next/components";
       })
         .then(async (response) => {
           let json = await response.json();
+          const currentLang = getLangFromUrl(window.location);
+
           if (response.status == 200) {
             button.textContent = "Reach Out to Us Today";
             button.disabled = false;
-            location.href = `/confirmation?name=${name}`;
+            location.href = `/${currentLang}/confirmation?name=${name}`;
             result.innerHTML = json.message;
           } else {
             console.log(response);
