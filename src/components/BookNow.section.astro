@@ -3,6 +3,7 @@ import Icon from "./Icon.astro";
 import Link from "./ui/LinkOrButton.astro";
 import { t } from "i18next";
 import { Trans } from "astro-i18next/components";
+import { localizePath } from "astro-i18next";
 ---
 
 <section id="book" class="text-gray-600 body-font with-background">
@@ -26,7 +27,7 @@ import { Trans } from "astro-i18next/components";
       </p>
       <div class="flex justify-center">
         <Link
-          href="/contact"
+          href={localizePath("/contact")}
           target="_self"
           class="flex gap-1 items-center justify-center"
           rel="noopener">

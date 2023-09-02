@@ -23,6 +23,7 @@ import ContactUs from "@components/ContactUs.section.astro";
 import SocialProof from "@components/SocialProof.section.astro";
 import Pricing from "@components/Pricing.section.astro";
 import i18next, { t, changeLanguage } from "i18next";
+import { localizePath } from "astro-i18next";
 
 changeLanguage("es");
 
@@ -42,7 +43,7 @@ const projects = (await getCollection("work"))
           align="start">
           <div class="roles">
             <Link
-              href="/contact"
+              href={localizePath("/contact")}
               target="_self"
               class="flex gap-1 items-center justify-center"
               rel="noopener">
