@@ -114,7 +114,9 @@
   },
   "footer": {
     "title": "Revolution Languages",
-    "text": "Revolutionary Language Learning for Kids"
+    "text": "Revolutionary Language Learning for Kids",
+    "privacy": "Privacy policy",
+    "terms": "Terms and conditions"
   },
   "confirmation": {
     "greeting": "you’re close for the Tour!",

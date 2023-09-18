@@ -86,13 +86,13 @@
       },
       "package2": {
         "price": "<0>$7</0> <1>/por niño/a</1>",
-        "title": "Tourist",
+        "title": "Traveler",
         "type": "(Programa parcial)",
         "main": "Ticket para 4 shows"
       },
       "package3": {
         "price": "<0>$7</0> <1>/por niño/a</1>",
-        "title": "Tourist",
+        "title": "Travel camp",
         "type": "(Show único)",
         "main": "Ticket para 8 shows + Productos Digitales"
       },
@@ -114,8 +114,10 @@
     }
   },
   "footer": {
-    "title": "Revolucionar los lenguajes",
-    "text": "Aprendizaje revolucionario para niños"
+    "title": "Revolution Languages",
+    "text": "Aprendizaje revolucionario para niños",
+    "privacy": "Políticas de privacidad",
+    "terms": "Términos y condiciones"
   },
   "confirmation": {
     "greeting": "¡estás cerca del Tour!",
