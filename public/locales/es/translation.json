@@ -51,17 +51,17 @@
     },
     "aboutus": {
       "section-title": "SOBRE NOSOTROS",
-      "main-title": "¡Conoce a tus <0>mentores!</0>",
+      "main-title": "¡Conoce a tus <0>coaches!</0>",
       "text": "Conoce a los educadores en tu vida que pueden ayudarte a guiarte en el camino de aprendizaje. Ellos tienen sabiduría, experiencia y conocimientos para ayudarte a alcanzar el éxito.",
       "cta": "¡Contáctanos ahora!"
     },
     "reviews": {
       "section-title": "TESTIMONIOS",
-      "main-title": "¡Descubre lo que dicen nuestros clientes satisfechos!",
+      "main-title": "¡Descubre lo que opinan las mamis de nuestros viajeros!",
       "text": "Lee nuestras reseñas para saber por qué puedes confiar en nosotros.",
       "second-title": "¡Nuestras alianzas para <0>un futuro mejor!</0>",
       "testimony1": "“Cómo educadora y madre de una niña de 6 años  estoy muy feliz de encontrar a los chicos de revlan Perú  ellos han innovado la forma de aprender un segundo idioma en este caso el inglés  de forma dinámica , divertida y dosificada para niños y jóvenes. Camilu es feliz en los shows por qué de forma natural sin presiones  disfrutan y aprenden. También lo que me encantó es la responsabilidad social del proyecto brindando una parte de las ganancias a un caso social. Los super recomiendo !” - ",
-      "testimony2": "“Yo recomiendo REVLAN porque los chicos Benja y Sara aplican como estrategia los Shows para que los niños aprendan inglés de manera entretenida y divertida. Mi hijo muy contento con el programa, se divierte, conoce amigos de diferentes lugares del Peru y el mundo; ademas conoce culturas de otros países,  interactúan con personas del extranjero. Y lo más importante aprende el idioma.”",
+      "testimony2": "“Estoy muy contenta y agradecida con la innovadora Iniciativa de Revlan dirigida por los jóvenes Sarah y Benja quienes enseñan inglés a niños a través de Show Interactivos. Particularmente mi hija de 6 años no sólo está aprendiendo la Correcta pronunciación del inglés sino también se divierte con otros niños de distintas partes del país y del mundo. Los show están llenos de juegos que son súper dinámicos y donde los niños disfrutan aprender otro idioma. No hay niños con miedos ni vergüenza solo se percibe niños felices. Por eso yo recomiendo REVLAN.”",
       "testimony3": "“Estoy feliz con el método de enseñanza que tienen con los niños, me recomendaron estos shows y de verdad no me arrepiento para nada, todo lo contrario, mi hijo está feliz de aprender cada día Inglés con esta metodología divertida, Gracias Benja y Sarah, los súper recomiendo”"
     },
     "pricing": {
@@ -86,13 +86,13 @@
       },
       "package2": {
         "price": "<0>$7</0> <1>/por niño/a</1>",
-        "title": "Tourist",
+        "title": "Traveler",
         "type": "(Programa parcial)",
         "main": "Ticket para 4 shows"
       },
       "package3": {
         "price": "<0>$7</0> <1>/por niño/a</1>",
-        "title": "Tourist",
+        "title": "Travel camp",
         "type": "(Show único)",
         "main": "Ticket para 8 shows + Productos Digitales"
       },
@@ -114,8 +114,10 @@
     }
   },
   "footer": {
-    "title": "Revolucionar los lenguajes",
-    "text": "Aprendizaje revolucionario para niños"
+    "title": "Revolution Languages",
+    "text": "Aprendizaje revolucionario para niños",
+    "privacy": "Políticas de privacidad",
+    "terms": "Términos y condiciones"
   },
   "confirmation": {
     "greeting": "¡estás cerca del Tour!",

@@ -41,11 +41,11 @@ const projects = (await getCollection("work"))
           title="Experience the power of Edutainment with REVLAN"
           tagline="Revolutionary Language Learning for Kids"
           align="start">
-          <div class="roles">
+          <div class="roles flex flex-col md:flex-row">
             <Link
               href={localizePath("/contact")}
               target="_self"
-              class="flex gap-1 items-center justify-center"
+              class="flex gap-1 items-center justify-center mb-4 md:mb-0"
               rel="noopener">
               {t("home.main-cta")}
               <Icon icon="arrow-right" size="1.2em" />
@@ -54,7 +54,7 @@ const projects = (await getCollection("work"))
               id="watch-trigger"
               style="outline"
               href="#"
-              class="gap-1 items-center justify-center hidden md:flex"
+              class="flex gap-1 items-center justify-center"
               rel="noopener">
               {t("home.watch-video-cta")}
               <Icon icon="video-camera" size="1.2em" />
@@ -92,7 +92,7 @@ const projects = (await getCollection("work"))
               alt="book 2"
             />
             <img
-              class="book-image item-3 motion"
+              class="book-image item-3 bounce md:motion"
               src="/assets/hero-gaming-revlan.png"
               alt="book 3"
             />

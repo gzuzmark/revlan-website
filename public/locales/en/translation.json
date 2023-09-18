@@ -24,17 +24,17 @@
     "feature2-title": "High-Quality Edutainment",
     "feature2-text": "We offer a unique combination of education and entertainment, providing a fun and engaging way for children to learn a new language.",
     "feature3-title": "Improved Language Skills",
-    "feature3-text": "Our shows not only expand vocabulary and strengthen pronunciation and intonation, but they also boost your childs self esteem and confidence a crucial foundation for mastering any language.",
+    "feature3-text": "Our shows not only expand vocabulary, and strengthen pronunciation and intonation, but they also boost your child's self-esteem and confidence, a crucial foundation for mastering any language.",
     "feature4-title": "Culture Awareness",
     "feature4-text": "REVLAN fosters cultural understanding and empathy in children, shaping them into open minded individuals ready to thrive in our global society.",
     "feature5-title": "Confidence and Empowerment",
     "feature5-text": "REVLAN's shows effortlessly enhance vocabulary, pronunciation, and intonation, creating a seamless learning experience where children absorb language skills without even realizing it.",
     "feature6-title": "Great solution for parents",
     "feature6-text": "REVLAN: Fun, effective, and affordable language learning for your child.",
-    "features-cta": "Secure Your Child s Spot Today",
+    "features-cta": "Secure Your Child's Spot Today",
     "programs": {
       "title": "THE SHOW",
-      "title2": "What s in our <0>teaching bag</0> of tricks?",
+      "title2": "What's in our <0>teaching bag</0> of tricks?",
       "subtitle": "A magical assortment of techniques, tools, and activities to make learning fun and engaging!",
       "item1-title": "A new country a new episode",
       "item1-text": "Each show focuses on exploring a new country.",
@@ -43,7 +43,7 @@
       "item3-title": "Virtual take off",
       "item3-text": "The show starts with a virtual takeoff in an airplane and a short video on the destination country.",
       "item4-title": "Let s explore and learn",
-      "item4-text": "Once landed in the country, the exploration begins through interactive games themed around the country s attractions/ culture.",
+      "item4-text": "Once landed in the country, the exploration begins through interactive games themed around the country's attractions/ culture.",
       "item5-title": "Engage and play",
       "item5-text": "The games are designed to engage children in English in a very organic way, promoting language learning while having fun.",
       "item6-title": "It s time to leave for the next adventure!",
@@ -51,17 +51,17 @@
     },
     "aboutus": {
       "section-title": "ABOUT US",
-      "main-title": "Meet Your <0>Mentors!</0>",
+      "main-title": "Meet Your <0>Coaches!</0>",
       "text": "Get to know the educators in your life that can help guide you on your journey. They have the wisdom, experience and knowledge to help you achieve success.",
       "cta": "Contact us now!"
     },
     "reviews": {
       "section-title": "REVIEWS",
-      "main-title": "See What Our <0> Traveler s moms </0> Are Saying!",
+      "main-title": "See What Our <0> Traveler's Moms </0> Are Saying!",
       "text": "Read through our reviews to see why you can trust us.",
       "second-title": "Our Alliances for a <0>Brighter Future!</0>",
       "testimony1": "“As an educator and mother of a 6 year old girl, I am very happy to find the kids of Revlan Peru. They have innovated the way of learning a second language, in this case English, in a dynamic, fun and dosed way for children and young people. Camilu is happy in the shows because they enjoy and learn naturally without pressures. What I also loved is the social responsibility of the project, providing part of the profits to a social case. I highly recommend them!”",
-      "testimony2": "“I am very happy and grateful for the innovative REVLAN Initiative directed by young Sarah and Benja who teach English to children through Interactive Shows. Particularly my 6 year old daughter is not only learning the correct pronunciation of English but also having fun with other children from different parts of the country and the world. The shows are full of games that are super dynamic and where the children enjoy learning another language. There are no children with fear or shyness, only happy children is perceived. That is why I recommend REVLAN.”",
+      "testimony2": "“I am very happy and grateful for the innovative initiative of Revlan led by Sarah and Benja, who teach English to children through interactive shows. Particularly, my 6-year-old daughter is not only learning the correct pronunciation of English but also having fun with other children from different parts of the country and the world. The shows are full of dynamic games where children enjoy learning another language. There are no fearful or embarrassed children; you only perceive happy children. That's why I recommend REVLAN.”",
       "testimony3": "“I'm so happy with the teaching method they have with the kids, they recommended these shows to me and I really don't regret it at all, quite the opposite, my son is very happy to learn English every day with this fun methodology, Thanks Benja and Sarah, I strongly recommend them!”"
     },
     "pricing": {
@@ -114,7 +114,9 @@
   },
   "footer": {
     "title": "Revolution Languages",
-    "text": "Revolutionary Language Learning for Kids"
+    "text": "Revolutionary Language Learning for Kids",
+    "privacy": "Privacy policy",
+    "terms": "Terms and conditions"
   },
   "confirmation": {
     "greeting": "you’re close for the Tour!",
