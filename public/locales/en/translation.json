@@ -109,7 +109,8 @@
     },
     "contactUs": {
       "title": "Contact Us",
-      "text": "Get in touch with our english methodology and <0>explore more about edutainment with Revlan.</0>"
+      "text": "Get in touch with our english methodology and <0>explore more about edutainment with Revlan.</0>",
+      "cta": "Reach Out to Us Today"
     }
   },
   "footer": {
