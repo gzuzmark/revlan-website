@@ -24,6 +24,7 @@ import SocialProof from "@components/SocialProof.section.astro";
 import Pricing from "@components/Pricing.section.astro";
 import i18next, { t, changeLanguage } from "i18next";
 import { localizePath } from "astro-i18next";
+import { LanguageSelector } from "astro-i18next/components";
 
 changeLanguage("en");
 
@@ -37,6 +38,10 @@ const projects = (await getCollection("work"))
   <div class="stack gap-20 lg:gap-48">
     <header class="wrapper stack gap-8 lg:gap-20 -mb-48 lg:-mb-48">
       <header class="hero">
+        <LanguageSelector
+          showFlag={true}
+          class="my-select-class w-32 md:hidden"
+        />
         <Hero
           title="Experience the power of Edutainment with REVLAN"
           tagline="Revolutionary Language Learning for Kids"
@@ -124,6 +129,14 @@ const projects = (await getCollection("work"))
 </BaseLayout>
 
 <style>
+  .my-select-class option.english::before {
+    content: "🇺🇸";
+  }
+
+  .my-select-class option.spanish::before {
+    content: "🇪🇸";
+  }
+
   .hero {
     display: flex;
     flex-direction: column;
