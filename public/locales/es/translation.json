@@ -1,7 +1,7 @@
 {
   "site": {
-    "title": "My awesome website!",
-    "description": "Here is the description of my awesome website!"
+    "title": "Revlan",
+    "description": "Aprendizaje de idiomas revolucionario para niños"
   },
   "menu": {
     "item1": "¿Cómo funciona?",
@@ -70,7 +70,7 @@
       "per-text": "por niño",
       "text": "Elige el paquete perfecto para hacer de tu experiencia en el show algo inolvidable.",
       "second-title": "Our Alliances for a <0>Brighter Future!</0>",
-      "features-title": "Digital products",
+      "features-title": "Productos Digitales",
       "features": {
         "1": "Itinerario de Viaje",
         "2": "Libro de actividades",
