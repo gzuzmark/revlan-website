@@ -9,7 +9,8 @@
     "item3": "Programmes",
     "item4": "Réservez maintenant",
     "item5": "Nos tarifs",
-    "item6": "Contactez-nous"
+    "item6": "Contactez-nous",
+    "item7": "Preuve sociale"
   },
   "home": {
     "title": "Découvrez la puissance de <1>l'Edutainment </1> avec REVLAN",
@@ -102,6 +103,15 @@
       "footer-h1": "Contactez-nous pour obtenir <0>un forfait spécial </0>",
       "footer-h2": "pour votre groupe et créer une expérience inoubliable"
     },
+    "originalProgram": {
+      "title": "Notre <0> Programme Original</0>",
+      "subtitle1": "Philosophie",
+      "subtitle2": "Approche",
+      "subtitle3": "Curriculum",
+      "text1": "Notre philosophie chez REVLAN est enracinée dans la conviction que l'apprentissage des langues est le plus efficace lorsqu'il est combiné au divertissement. Nous visons à redéfinir l'éducation linguistique en créant une expérience d'apprentissage captivante et immersive.",
+      "text2": "Notre approche privilégie l'apprentissage expérientiel, où les enfants participent à des interactions authentiques et à des activités pour développer naturellement leurs compétences linguistiques. Nous mettons l'accent sur le développement de l'amour de l'apprentissage et de la curiosité pour le monde.",
+      "text3": "Le programme d'études de REVLAN est conçu pour permettre aux enfants d'explorer la langue et la culture à travers des expériences interactives et captivantes. Nous nous concentrons sur le développement des compétences linguistiques essentielles tout en favorisant la créativité, la curiosité et la confiance chez les enfants."
+    },
     "booknow": {
       "section": "RÉSERVEZ MAINTENANT",
       "title": "<0>Réservez votre place dès maintenant</0>",
@@ -117,9 +127,9 @@
   },
   "footer": {
     "title": "Revolution Languages",
-    "text": "Revolutionary Language Learning for Kids",
-    "privacy": "Privacy policy",
-    "terms": "Terms and conditions"
+    "text": "Une Révolution dans l'Apprentissage des Langues pour les Enfants",
+    "privacy": "Politique de confidentialité",
+    "terms": "Termes et conditions"
   },
   "confirmation": {
     "greeting": "tu es proche du Tour !",
