@@ -14,7 +14,7 @@ const textLinks: { label: string; href: string }[] = [
   { label: t("menu.item2"), href: "about" },
   { label: t("menu.item3"), href: "programs" },
   { label: t("menu.item4"), href: "book" },
-  { label: t("menu.item5"), href: "pricing" },
+  // { label: t("menu.item5"), href: "pricing" },
 ];
 
 /** Icon links to social media — edit these with links to your profiles! */
@@ -37,22 +37,22 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
 ];
 ---
 
-<nav class=''>
-  <div class='menu-header'>
-    <a href={localizePath("/")} class='site-title'>
-      <Image src={logo} alt='hero image' class='max-w-4xl' />
+<nav class="">
+  <div class="menu-header">
+    <a href={localizePath("/")} class="site-title">
+      <Image src={logo} alt="hero image" class="max-w-4xl" />
     </a>
     <menu-button>
       <template>
-        <button class='menu-button' aria-expanded='false'>
-          <span class='sr-only'>Menu</span>
-          <Icon icon='list' />
+        <button class="menu-button" aria-expanded="false">
+          <span class="sr-only">Menu</span>
+          <Icon icon="list" />
         </button>
       </template>
     </menu-button>
   </div>
-  <div id='menu-content'>
-    <ul class='nav-items'>
+  <div id="menu-content">
+    <ul class="nav-items">
       {
         textLinks.map(({ label, href }) => {
           return (
@@ -77,11 +77,11 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
       }
       <li>
         <LinkOrButton
-          style='primary'
-          href='#contact'
-          class='flex gap-1 items-center justify-center'>
+          style="primary"
+          href="#contact"
+          class="flex gap-1 items-center justify-center whitespace-nowrap">
           {t("menu.item6")}
-          <Icon icon='airplane' size='1.2em' />
+          <Icon icon="airplane" size="1.2em" />
         </LinkOrButton>
       </li>
       <li>
@@ -92,11 +92,11 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
           >
           <button id="btn-pen" class="py-1 px-4 focus:outline-none">ES</button>
         </div> -->
-        <LanguageSelector showFlag={true} class='my-select-class' />
+        <LanguageSelector showFlag={true} class="my-select-class" />
       </li>
     </ul>
 
-    <div class='menu-footer'>
+    <div class="menu-footer">
       <!-- <div class='socials'>
         {
           iconLinks.map(({ href, icon, label }) => (
@@ -142,7 +142,7 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
         setExpanded(e.matches);
         btn.hidden = e.matches;
       };
-      const mediaQueries = window.matchMedia("(min-width: 50em)");
+      const mediaQueries = window.matchMedia("(min-width: 900px)");
       handleViewports(mediaQueries);
       mediaQueries.addEventListener("change", handleViewports);
     }
@@ -156,7 +156,7 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
 
   document.documentElement.style.setProperty(
     "--scroll-padding",
-    navigationHeight + "px"
+    navigationHeight + "px",
   );
 
   //get all nav items
@@ -269,6 +269,9 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
     display: inline-block;
     color: var(--gray-300);
     text-decoration: none;
+    /* min-width: 100px; 
+    margin: 0 auto; 
+    text-align: center;  */
   }
 
   .link.active {
@@ -314,7 +317,7 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
     height: calc(var(--icon-size) + 2 * var(--icon-padding));
   }
 
-  @media (min-width: 50em) {
+  @media (min-width: 900px) {
     nav {
       display: grid;
       grid-template-columns: 1fr auto 1fr;
@@ -345,10 +348,10 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
       /* background: radial-gradient(var(--gray-900), var(--gray-800) 150%); */
       box-shadow: var(--shadow-md);
       top: 5px;
-      left: -5.5rem;
+      left: -6.75rem;
       /* z-index: -1;  */
-      padding-left: 8.5rem;
-      width: 65rem;
+      padding-left: 5.5rem;
+      /* width: 76rem; */
       align-items: center;
     }
 
