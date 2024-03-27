@@ -1,7 +1,8 @@
 {
   "site": {
     "title": "Revlan",
-    "description": "Aprendizaje de idiomas revolucionario para niños"
+    "description": "Aprendizaje de idiomas revolucionario para niños",
+    "video": "https://www.youtube.com/embed/Mi0ClLqcgRQ"
   },
   "menu": {
     "item1": "¿Cómo funciona?",

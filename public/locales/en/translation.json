@@ -1,7 +1,8 @@
 {
   "site": {
     "title": "Revlan website",
-    "description": "Edutainment and revolutionary Language Learning for Kids"
+    "description": "Edutainment and revolutionary Language Learning for Kids",
+    "video": "https://www.youtube.com/embed/Mi0ClLqcgRQ"
   },
   "menu": {
     "item1": "How it works",
