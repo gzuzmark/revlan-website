@@ -20,8 +20,9 @@ import Features from "@components/Features.section.astro";
 import AboutUs from "@components/AboutUs.section.astro";
 import BookNow from "@components/BookNow.section.astro";
 import ContactUs from "@components/ContactUs.section.astro";
+import OriginalProgram from "@components/OriginalProgram.section.astro";
 import SocialProof from "@components/SocialProof.section.astro";
-import Pricing from "@components/Pricing.section.astro";
+// import Pricing from "@components/Pricing.section.astro";
 import i18next, { t, changeLanguage } from "i18next";
 import { localizePath } from "astro-i18next";
 import { LanguageSelector } from "astro-i18next/components";
@@ -35,34 +36,34 @@ const projects = (await getCollection("work"))
 ---
 
 <BaseLayout>
-  <div class="stack gap-20 lg:gap-48">
-    <header class="wrapper stack gap-8 lg:gap-20 -mb-48 lg:-mb-48">
-      <header class="hero">
+  <div class='stack gap-20 lg:gap-48'>
+    <header class='wrapper stack gap-8 lg:gap-20 -mb-48 lg:-mb-48'>
+      <header class='hero'>
         <LanguageSelector
           showFlag={true}
-          class="my-select-class w-32 md:hidden"
+          class='my-select-class w-32 md:hidden'
         />
         <Hero
-          title="Experience the power of Edutainment with REVLAN"
-          tagline="Revolutionary Language Learning for Kids"
-          align="start">
-          <div class="roles flex flex-col md:flex-row">
+          title='Experience the power of Edutainment with REVLAN'
+          tagline='Revolutionary Language Learning for Kids'
+          align='start'>
+          <div class='roles flex flex-col md:flex-row'>
             <Link
               href={localizePath("/contact")}
-              target="_self"
-              class="flex gap-1 items-center justify-center mb-4 md:mb-0"
-              rel="noopener">
+              target='_self'
+              class='flex gap-1 items-center justify-center mb-4 md:mb-0'
+              rel='noopener'>
               {t("home.main-cta")}
-              <Icon icon="arrow-right" size="1.2em" />
+              <Icon icon='arrow-right' size='1.2em' />
             </Link>
             <Link
-              id="watch-trigger"
-              style="outline"
-              href="#"
-              class="flex gap-1 items-center justify-center"
-              rel="noopener">
+              id='watch-trigger'
+              style='outline'
+              href='#'
+              class='flex gap-1 items-center justify-center'
+              rel='noopener'>
               {t("home.watch-video-cta")}
-              <Icon icon="video-camera" size="1.2em" />
+              <Icon icon='video-camera' size='1.2em' />
             </Link>
           </div>
         </Hero>
@@ -79,32 +80,32 @@ const projects = (await getCollection("work"))
             alt="hero image"
           />
         </div> -->
-        <div class="hero-images lg:-left-20">
+        <div class='hero-images lg:-left-20'>
           <img
-            class="hero-image z-[2]"
-            src="/assets/hero-image.png"
-            alt="hero image"
+            class='hero-image z-[2]'
+            src='/assets/hero-image.png'
+            alt='hero image'
           />
-          <div class="books-container">
+          <div class='books-container'>
             <img
-              class="book-image item-1 bounce"
-              src="/assets/hero-travel-bag-revlan.png"
-              alt="book 1"
+              class='book-image item-1 bounce'
+              src='/assets/hero-travel-bag-revlan.png'
+              alt='book 1'
             />
             <img
-              class="book-image item-2 bounce"
-              src="/assets/hero-airplane-revlan.png"
-              alt="book 2"
+              class='book-image item-2 bounce'
+              src='/assets/hero-airplane-revlan.png'
+              alt='book 2'
             />
             <img
-              class="book-image item-3 bounce md:motion"
-              src="/assets/hero-gaming-revlan.png"
-              alt="book 3"
+              class='book-image item-3 bounce md:motion'
+              src='/assets/hero-gaming-revlan.png'
+              alt='book 3'
             />
             <img
-              class="book-image item-4 motion"
-              src="/assets/hero-pink-book-revlan.png"
-              alt="book 4"
+              class='book-image item-4 motion'
+              src='/assets/hero-pink-book-revlan.png'
+              alt='book 4'
             />
           </div>
         </div>
@@ -112,14 +113,16 @@ const projects = (await getCollection("work"))
 
       <!-- <Skills /> -->
     </header>
-    <div class="spacer layer1 mt-28 xl:-mt-4 lg:mt-5 md:mt-28"></div>
-    <main class="stack -mt-28 lg:-mt-80">
+    <div class='spacer layer1 mt-28 xl:-mt-4 lg:mt-5 md:mt-28'></div>
+    <main class='stack -mt-28 lg:-mt-80'>
       <Features />
       <Programs />
       <AboutUs />
-      <div class="spacer layer1 -mb-40"></div>
+      <div class='spacer layer1 -mb-40'></div>
       <SocialProof />
-      <Pricing />
+      <OriginalProgram />
+      <div class='spacer -mb-80'></div>
+      <!-- <Pricing /> -->
       <BookNow />
       <ContactUs />
     </main>
@@ -428,7 +431,8 @@ const projects = (await getCollection("work"))
     aspect-ratio: calc(2.25 / var(--bg-scale));
     top: 0;
     transform: translateY(-75%) translateX(-50%);
-    background: url("/assets/backgrounds/noise.png") top center/220px repeat,
+    background:
+      url("/assets/backgrounds/noise.png") top center/220px repeat,
       var(--hero-bg) center center / var(--bg-gradient-size) no-repeat,
       var(--gray-999);
     background-blend-mode: overlay, normal, normal, normal;
