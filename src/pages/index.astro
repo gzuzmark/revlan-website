@@ -89,7 +89,9 @@ const projects = (await getCollection("work"))
           />
         </div> -->
         <div class='hero-images lg:-left-20'>
-          <Image
+          <Image src={heroMainImage} alt='hero main' class='hero-image z-[2]' />
+          <div class='books-container'>
+            <Image
               src={heroTravelBag}
               alt='gaming controller hero'
               class='book-image item-1 bounce'
@@ -113,6 +115,7 @@ const projects = (await getCollection("work"))
               class='book-image item-4 motion'
             />
           </div>
+        </div>
         </div>
       </header>
 
