@@ -74,6 +74,37 @@ const { title, description } = Astro.props;
               header!.style.position = "static";
             }
           });
+
+           // Select the modal and iframe elements
+           const modal = document.querySelector(".modal");
+          const iframe = modal.querySelector("iframe");
+          const originalSrc = iframe.src; // Store the original src to reset later
+
+          // Function to reset the iframe src
+          const resetIframeSrc = () => {
+            iframe.src = ""; // First, clear the src
+            iframe.src = originalSrc; // Then, reset it to the original source
+          };
+
+          // Create a MutationObserver to observe changes in the modal's class attribute
+          const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+              if (mutation.attributeName === "class") {
+                const classList = mutation.target.classList;
+                // If the modal does not have the 'show' class, it means the modal was closed
+                if (!classList.contains("show")) {
+                  resetIframeSrc(); // Reset the iframe src to stop the video
+                }
+              }
+            });
+          });
+
+          // Start observing the modal for attribute changes
+          observer.observe(modal, {
+            attributes: true, // We're only interested in changes to attributes
+          });
+
+
         });
       </script>
 
