@@ -37,22 +37,22 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
 ];
 ---
 
-<nav class="">
-  <div class="menu-header">
-    <a href={localizePath("/")} class="site-title">
-      <Image src={logo} alt="hero image" class="max-w-4xl" />
+<nav class=''>
+  <div class='menu-header'>
+    <a href={localizePath("/")} class='site-title'>
+      <Image src={logo} alt='hero image' class='max-w-4xl' />
     </a>
     <menu-button>
       <template>
-        <button class="menu-button" aria-expanded="false">
-          <span class="sr-only">Menu</span>
-          <Icon icon="list" />
+        <button class='menu-button' aria-expanded='false'>
+          <span class='sr-only'>Menu</span>
+          <Icon icon='list' />
         </button>
       </template>
     </menu-button>
   </div>
-  <div id="menu-content">
-    <ul class="nav-items">
+  <div id='menu-content'>
+    <ul class='nav-items'>
       {
         textLinks.map(({ label, href }) => {
           return (
@@ -77,11 +77,11 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
       }
       <li>
         <LinkOrButton
-          style="primary"
-          href="#contact"
-          class="flex gap-1 items-center justify-center whitespace-nowrap">
+          style='primary'
+          href='#contact'
+          class='flex gap-1 items-center justify-center whitespace-nowrap'>
           {t("menu.item6")}
-          <Icon icon="airplane" size="1.2em" />
+          <Icon icon='airplane' size='1.2em' />
         </LinkOrButton>
       </li>
       <li>
@@ -92,11 +92,11 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
           >
           <button id="btn-pen" class="py-1 px-4 focus:outline-none">ES</button>
         </div> -->
-        <LanguageSelector showFlag={true} class="my-select-class" />
+        <LanguageSelector showFlag={true} class='my-select-class' />
       </li>
     </ul>
 
-    <div class="menu-footer">
+    <div class='menu-footer'>
       <!-- <div class='socials'>
         {
           iconLinks.map(({ href, icon, label }) => (
@@ -156,7 +156,7 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
 
   document.documentElement.style.setProperty(
     "--scroll-padding",
-    navigationHeight + "px",
+    navigationHeight + "px"
   );
 
   //get all nav items
@@ -216,15 +216,20 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
     border-radius: 999rem;
     padding: 0.5rem;
     font-size: 1.5rem;
-    color: var(--gray-300);
-    background: radial-gradient(var(--gray-900), var(--gray-800) 150%);
+    color: #@ff3d67;
+    background: #ffe56a;
+    /* background: radial-gradient(
+      circle,
+      hsla(195, 86%, 50%, 1) 0%,
+      hsla(236, 93%, 65%, 1) 100%
+    ); */
     box-shadow: var(--shadow-md);
   }
 
   .menu-button[aria-expanded="true"] {
     color: var(--gray-0);
-    background: linear-gradient(180deg, var(--gray-600), transparent),
-      radial-gradient(var(--gray-900), var(--gray-800) 150%);
+    background: linear-gradient(180deg, #ff7568, transparent),
+      radial-gradient(hsla(347, 100%, 62%, 1), hsla(50, 100%, 71%, 1) 150%);
   }
 
   .menu-button[hidden] {
