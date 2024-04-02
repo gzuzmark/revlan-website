@@ -2,172 +2,175 @@
 import Icon from "./Icon.astro";
 import i18next, { t, changeLanguage } from "i18next";
 import { Trans } from "astro-i18next/components";
+import { Image } from "astro:assets";
+import ourProgramImage from "../assets/ourprogram.svg";
 ---
 
-<section id="programs" class="text-gray-600 body-font bg-purple-50 mb-20">
-  <div class="container px-5 py-24 mx-auto flex flex-wrap">
-    <div class="flex flex-col text-center w-full mb-20">
+<section id='programs' class='text-gray-600 body-font bg-purple-50 mb-20'>
+  <div class='container px-5 py-24 mx-auto flex flex-wrap'>
+    <div class='flex flex-col text-center w-full mb-20'>
       <h2
-        class="text-xs text-black tracking-widest font-medium title-font mb-1">
+        class='text-xs text-black tracking-widest font-medium title-font mb-1'>
         {t("home.programs.title")}
       </h2>
-      <h1 class="sm:text-3xl text-5xl font-medium title-font text-gray-900">
-        <Trans i18nKey="home.programs.title2">
-          What's in our <span class="text-purple-700">teaching bag</span> of tricks?
+      <h1 class='sm:text-3xl text-5xl font-medium title-font text-gray-900'>
+        <Trans i18nKey='home.programs.title2'>
+          What's in our <span class='text-purple-700'>teaching bag</span> of tricks?
         </Trans>
       </h1>
-      <h2 class="text-xs tracking-widest font-medium title-font mb-1">
+      <h2 class='text-xs tracking-widest font-medium title-font mb-1'>
         {t("home.programs.subtitle")}
       </h2>
     </div>
-    <div class="flex flex-wrap flex-row w-full">
+    <div class='flex flex-wrap flex-row w-full'>
       <div
-        class="sm:flex-grow md:flex-grow pr-2 md:pr-0 w-full lg:w-1/2 md:order-2 lg:order-1">
-        <div class="flex relative pb-12 items-center gap-5">
+        class='sm:flex-grow md:flex-grow pr-2 md:pr-0 w-full lg:w-1/2 md:order-2 lg:order-1'>
+        <div class='flex relative pb-12 items-center gap-5'>
           <div
-            class="h-full w-6 absolute inset-0 flex items-center justify-center">
-            <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+            class='h-full w-6 absolute inset-0 flex items-center justify-center'>
+            <div class='h-full w-1 bg-gray-200 pointer-events-none'></div>
           </div>
           <div
-            class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-purple text-white relative z-10 title-font font-medium text-sm">
+            class='flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-purple text-white relative z-10 title-font font-medium text-sm'>
             1
           </div>
           <div
-            class="flex-shrink-0 w-14 h-14 rounded-full bg-purple-light inline-flex items-center justify-center text-purple border-purple-300 border relative z-10">
-            <Icon icon="air-plane-flight" size="1.5em" />
+            class='flex-shrink-0 w-14 h-14 rounded-full bg-purple-light inline-flex items-center justify-center text-purple border-purple-300 border relative z-10'>
+            <Icon icon='air-plane-flight' size='1.5em' />
           </div>
-          <div class="flex-grow pl-4">
+          <div class='flex-grow pl-4'>
             <h2
-              class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
+              class='font-medium title-font text-sm text-gray-900 mb-1 tracking-wider'>
               {t("home.programs.item1-title")}
             </h2>
-            <p class="leading-relaxed">
+            <p class='leading-relaxed'>
               {t("home.programs.item1-text")}
             </p>
           </div>
         </div>
-        <div class="flex relative pb-12 items-center gap-5">
+        <div class='flex relative pb-12 items-center gap-5'>
           <div
-            class="h-full w-6 absolute inset-0 flex items-center justify-center">
-            <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+            class='h-full w-6 absolute inset-0 flex items-center justify-center'>
+            <div class='h-full w-1 bg-gray-200 pointer-events-none'></div>
           </div>
           <div
-            class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-purple text-white relative z-10 title-font font-medium text-sm">
+            class='flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-purple text-white relative z-10 title-font font-medium text-sm'>
             2
           </div>
           <div
-            class="flex-shrink-0 w-14 h-14 rounded-full bg-purple-light inline-flex items-center justify-center text-purple border-purple-300 border relative z-10">
-            <Icon icon="flashlight" size="1.5em" />
+            class='flex-shrink-0 w-14 h-14 rounded-full bg-purple-light inline-flex items-center justify-center text-purple border-purple-300 border relative z-10'>
+            <Icon icon='flashlight' size='1.5em' />
           </div>
-          <div class="flex-grow pl-4">
+          <div class='flex-grow pl-4'>
             <h2
-              class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
+              class='font-medium title-font text-sm text-gray-900 mb-1 tracking-wider'>
               {t("home.programs.item2-title")}
             </h2>
-            <p class="leading-relaxed">
+            <p class='leading-relaxed'>
               {t("home.programs.item2-text")}
             </p>
           </div>
         </div>
-        <div class="flex relative pb-12 items-center gap-5">
+        <div class='flex relative pb-12 items-center gap-5'>
           <div
-            class="h-full w-6 absolute inset-0 flex items-center justify-center">
-            <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+            class='h-full w-6 absolute inset-0 flex items-center justify-center'>
+            <div class='h-full w-1 bg-gray-200 pointer-events-none'></div>
           </div>
           <div
-            class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-purple text-white relative z-10 title-font font-medium text-sm">
+            class='flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-purple text-white relative z-10 title-font font-medium text-sm'>
             3
           </div>
           <div
-            class="flex-shrink-0 w-14 h-14 rounded-full bg-purple-light inline-flex items-center justify-center text-purple border-purple-300 border relative z-10">
-            <Icon icon="rocket-launch" size="1.5em" />
+            class='flex-shrink-0 w-14 h-14 rounded-full bg-purple-light inline-flex items-center justify-center text-purple border-purple-300 border relative z-10'>
+            <Icon icon='rocket-launch' size='1.5em' />
           </div>
-          <div class="flex-grow pl-4">
+          <div class='flex-grow pl-4'>
             <h2
-              class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
+              class='font-medium title-font text-sm text-gray-900 mb-1 tracking-wider'>
               {t("home.programs.item3-title")}
             </h2>
-            <p class="leading-relaxed">
+            <p class='leading-relaxed'>
               {t("home.programs.item3-text")}
             </p>
           </div>
         </div>
-        <div class="flex relative pb-12 items-center gap-5">
+        <div class='flex relative pb-12 items-center gap-5'>
           <div
-            class="h-full w-6 absolute inset-0 flex items-center justify-center">
-            <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+            class='h-full w-6 absolute inset-0 flex items-center justify-center'>
+            <div class='h-full w-1 bg-gray-200 pointer-events-none'></div>
           </div>
           <div
-            class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-purple text-white relative z-10 title-font font-medium text-sm">
+            class='flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-purple text-white relative z-10 title-font font-medium text-sm'>
             4
           </div>
           <div
-            class="flex-shrink-0 w-14 h-14 rounded-full bg-purple-light inline-flex items-center justify-center text-purple border-purple-300 border relative z-10">
-            <Icon icon="magnifying-glass" size="1.5em" />
+            class='flex-shrink-0 w-14 h-14 rounded-full bg-purple-light inline-flex items-center justify-center text-purple border-purple-300 border relative z-10'>
+            <Icon icon='magnifying-glass' size='1.5em' />
           </div>
-          <div class="flex-grow pl-4">
+          <div class='flex-grow pl-4'>
             <h2
-              class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
+              class='font-medium title-font text-sm text-gray-900 mb-1 tracking-wider'>
               {t("home.programs.item4-title")}
             </h2>
-            <p class="leading-relaxed">
+            <p class='leading-relaxed'>
               {t("home.programs.item4-text")}
             </p>
           </div>
         </div>
-        <div class="flex relative pb-12 items-center gap-5">
+        <div class='flex relative pb-12 items-center gap-5'>
           <div
-            class="h-full w-6 absolute inset-0 flex items-center justify-center">
-            <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+            class='h-full w-6 absolute inset-0 flex items-center justify-center'>
+            <div class='h-full w-1 bg-gray-200 pointer-events-none'></div>
           </div>
           <div
-            class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-purple text-white relative z-10 title-font font-medium text-sm">
+            class='flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-purple text-white relative z-10 title-font font-medium text-sm'>
             5
           </div>
           <div
-            class="flex-shrink-0 w-14 h-14 rounded-full bg-purple-light inline-flex items-center justify-center text-purple border-purple-300 border relative z-10">
-            <Icon icon="hands-clapping" size="1.5em" />
+            class='flex-shrink-0 w-14 h-14 rounded-full bg-purple-light inline-flex items-center justify-center text-purple border-purple-300 border relative z-10'>
+            <Icon icon='hands-clapping' size='1.5em' />
           </div>
-          <div class="flex-grow pl-4">
+          <div class='flex-grow pl-4'>
             <h2
-              class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
+              class='font-medium title-font text-sm text-gray-900 mb-1 tracking-wider'>
               {t("home.programs.item5-title")}
             </h2>
-            <p class="leading-relaxed">
+            <p class='leading-relaxed'>
               {t("home.programs.item5-text")}
             </p>
           </div>
         </div>
-        <div class="flex relative items-center gap-5">
+        <div class='flex relative items-center gap-5'>
           <div
-            class="h-full w-6 absolute inset-0 flex items-center justify-center">
-            <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+            class='h-full w-6 absolute inset-0 flex items-center justify-center'>
+            <div class='h-full w-1 bg-gray-200 pointer-events-none'></div>
           </div>
           <div
-            class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-purple text-white relative z-10 title-font font-medium text-sm">
+            class='flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-purple text-white relative z-10 title-font font-medium text-sm'>
             6
           </div>
           <div
-            class="flex-shrink-0 w-14 h-14 rounded-full bg-purple-light inline-flex items-center justify-center text-purple border-purple-300 border relative z-10">
-            <Icon icon="globe" size="1.5em" />
+            class='flex-shrink-0 w-14 h-14 rounded-full bg-purple-light inline-flex items-center justify-center text-purple border-purple-300 border relative z-10'>
+            <Icon icon='globe' size='1.5em' />
           </div>
-          <div class="flex-grow pl-4">
+          <div class='flex-grow pl-4'>
             <h2
-              class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
+              class='font-medium title-font text-sm text-gray-900 mb-1 tracking-wider'>
               {t("home.programs.item6-title")}
             </h2>
-            <p class="leading-relaxed">
+            <p class='leading-relaxed'>
               {t("home.programs.item6-text")}
             </p>
           </div>
         </div>
       </div>
       <div
-        class="flex justify-center w-full h-[30%] lg:w-1/2 lg:h-full md:order-1 lg:order-2">
-        <img
-          class="transform aspect-[4/3] scale-95 md:float-right md:scale-75"
-          src="/assets/ourprogram.svg"
-          alt="our programs"
+        class='flex justify-center w-full h-[30%] lg:w-1/2 lg:h-full md:order-1 lg:order-2'>
+        <Image
+          src={ourProgramImage}
+          loading='lazy'
+          alt='our program'
+          class='transform aspect-[4/3] scale-95 md:float-right md:scale-75'
         />
       </div>
     </div>
