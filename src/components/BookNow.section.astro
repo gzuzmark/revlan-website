@@ -4,6 +4,8 @@ import Link from "./ui/LinkOrButton.astro";
 import { t } from "i18next";
 import { Trans } from "astro-i18next/components";
 import { localizePath } from "astro-i18next";
+import { Image } from "astro:assets";
+import heroBook from "../assets/hero-book-now.webp";
 ---
 
 <section id="book" class="text-gray-600 body-font with-background">
@@ -37,10 +39,15 @@ import { localizePath } from "astro-i18next";
       </div>
     </div>
     <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-      <img
+      <!-- <img
         class="object-cover object-center rounded"
         alt="hero"
         src="/assets/hero-book-now.png"
+      /> -->
+      <Image
+        src={heroBook}
+        alt='hero image'
+        class='object-cover object-center rounded'
       />
     </div>
   </div>

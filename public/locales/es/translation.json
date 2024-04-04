@@ -1,7 +1,8 @@
 {
   "site": {
-    "title": "My awesome website!",
-    "description": "Here is the description of my awesome website!"
+    "title": "Revlan",
+    "description": "Aprendizaje de idiomas revolucionario para niños",
+    "video": "https://www.youtube.com/embed/Mi0ClLqcgRQ"
   },
   "menu": {
     "item1": "¿Cómo funciona?",
@@ -9,7 +10,8 @@
     "item3": "Programas",
     "item4": "Reserva ahora",
     "item5": "Precios",
-    "item6": "Contáctanos"
+    "item6": "Contáctanos",
+    "item7": "Testimonios"
   },
   "home": {
     "title": "Experimenta el poder del <1>Edutainment</1>  con REVLAN.",
@@ -70,7 +72,7 @@
       "per-text": "por niño",
       "text": "Elige el paquete perfecto para hacer de tu experiencia en el show algo inolvidable.",
       "second-title": "Our Alliances for a <0>Brighter Future!</0>",
-      "features-title": "Digital products",
+      "features-title": "Productos Digitales",
       "features": {
         "1": "Itinerario de Viaje",
         "2": "Libro de actividades",
@@ -99,6 +101,15 @@
       "footer-text": "¿Eres un instituto, organización o escuela interesada en traer este programa a tu grupo de niños?",
       "footer-h1": "¡Contáctanos para obtener un <0>paquete especial</0>",
       "footer-h2": "para tu grupo y crear una experiencia inolvidable!"
+    },
+    "originalProgram": {
+      "title": "Nuestro <0>Original Programa</0>",
+      "subtitle1": "Filosofía",
+      "subtitle2": "Enfoque",
+      "subtitle3": "Currículo",
+      "text1": "Nuestra filosofía en REVLAN está arraigada en la creencia de que el aprendizaje de idiomas es más efectivo cuando se combina con el entretenimiento. Nuestro objetivo es redefinir la educación lingüística creando una experiencia de aprendizaje cautivadora e inmersiva",
+      "text2": "Nuestro enfoque prioriza el aprendizaje experiencial, donde los niños participan en interacciones auténticas y actividades para desarrollar habilidades lingüísticas de manera natural. Nos enfocamos en fomentar el amor por el aprendizaje y la curiosidad por el mundo.",
+      "text3": "El currículo de REVLAN está diseñado para capacitar a los niños a explorar el idioma y la cultura a través de experiencias interactivas y atractivas. Nos enfocamos en desarrollar habilidades lingüísticas esenciales mientras fomentamos la creatividad, la curiosidad y la confianza en los niños."
     },
     "booknow": {
       "section": "¡RESERVA AHORA!",

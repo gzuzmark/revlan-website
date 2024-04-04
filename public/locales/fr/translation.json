@@ -1,0 +1,179 @@
+{
+  "site": {
+    "title": "Revlan website",
+    "description": "Découvrez la puissance de l'Edutainment avec REVLAN. Une Révolution dans l'Apprentissage des Langues pour les Enfants",
+    "video": "https://www.youtube.com/embed/UueTft4KS6Y?si=6AuiGFjXA5OzozGN"
+  },
+  "menu": {
+    "item1": "Comment ça marche",
+    "item2": "À propos de nous",
+    "item3": "Programmes",
+    "item4": "Réservez maintenant",
+    "item5": "Nos tarifs",
+    "item6": "Contactez-nous",
+    "item7": "Preuve sociale"
+  },
+  "home": {
+    "title": "Découvrez la puissance de <1>l'Edutainment </1> avec REVLAN",
+    "subtitle": "Une Révolution dans l'Apprentissage des Langues pour les Enfants",
+    "main-cta": "Rejoignez le Tour du Monde Maintenant",
+    "watch-video-cta": "Regarder la Vidéo",
+    "features-title": "COMMENT ÇA MARCHE",
+    "features-title2": "Comment proposons-nous <0>l'Edutainment</0>",
+    "features-subtitle": "En savoir plus sur notre méthodologie d'enseignement de l'anglais",
+    "feature1-title": "Convenient and Affordable Learning",
+    "feature1-text": "Le modèle un-à-plusieurs de REVLAN garantit une accessibilité sans compromettre l'engagement ou l'efficacité.",
+    "feature2-title": "Edutainment de haute qualité",
+    "feature2-text": "Nous proposons une combinaison unique d’apprentissage et de divertissement, offrant aux enfants une manière amusante et engageante d'apprendre une nouvelle langue.",
+    "feature3-title": "Amélioration des compétences linguistiques",
+    "feature3-text": "Nos activités n'augmentent pas seulement le vocabulaire et renforcent la prononciation et l'intonation, mais ils renforcent également l'estime de soi et la confiance de votre enfant, une base cruciale pour maîtriser n'importe quelle langue.",
+    "feature4-title": "Conscience culturelle",
+    "feature4-text": "REVLAN favorise la compréhension culturelle et l'empathie chez les enfants, les façonnant en individus ouverts d'esprit prêts à s'épanouir dans notre société mondialisée.",
+    "feature5-title": "Confiance et autonomisation",
+    "feature5-text": "Les activités de REVLAN améliorent sans effort le vocabulaire, la prononciation et l'intonation, créant une expérience d'apprentissage fluide où les enfants absorbent les compétences linguistiques sans même s'en rendre compte.",
+    "feature6-title": "Une excellente solution pour les parents",
+    "feature6-text": "REVLAN: un apprentissage linguistique amusant, efficace et abordable pour votre enfant.",
+    "features-cta": "Réservez dès aujourd'hui la place de votre enfant.",
+    "programs": {
+      "title": "NOTRE PROGRAMME",
+      "title2": "Que proposons-nous <0>notre panel</0> d'activités ?",
+      "subtitle": "Un assortiment magique de techniques, d'outils et d'activités pour rendre l'apprentissage amusant et captivant!",
+      "item1-title": "Un nouveau pays, un nouvel épisode",
+      "item1-text": "Chaque émission se concentre sur l'exploration d'un nouveau pays.",
+      "item2-title": "Familiarisez-vous avec le pays avant le décollage",
+      "item2-text": "De l'emplacement sur la carte au drapeau vibrant et à sa région dans le monde, embarquez pour un voyage éducatif comme aucun autre.",
+      "item3-title": "Décollage virtuel",
+      "item3-text": "L'émission commence par un décollage virtuel en avion et une courte vidéo sur le pays de destination.",
+      "item4-title": "Explorons et apprenons",
+      "item4-text": "Une fois arrivés dans le pays, l'exploration commence à travers des jeux interactifs thématiques basés sur les attractions et la cultures du pays.",
+      "item5-title": "Impliquez-vous et jouez",
+      "item5-text": "Les jeux sont conçus pour impliquer les enfants en anglais de manière très organique, favorisant l'apprentissage de la langue tout en s'amusant.",
+      "item6-title": "Il est temps de partir pour la prochaine aventure!",
+      "item6-text": "Chaque épisode se conclut par un au revoir au pays, laissant les spectateurs impatients pour la prochaine aventure."
+    },
+    "aboutus": {
+      "section-title": "À PROPOS DE NOUS",
+      "main-title": "Rencontrez vos <0>coachs !</0>",
+      "text": "Apprenez à connaître les éducateurs de votre vie qui peuvent vous aider à guider votre chemin. Ils ont la sagesse, l'expérience et les connaissances pour vous aider à atteindre le succès.",
+      "cta": "Contactez-nous maintenant!"
+    },
+    "reviews": {
+      "section-title": "PREUVE SOCIALE",
+      "main-title": "Découvrez ce que disent <0> nos clients </0> satisfaits!",
+      "text": "Lisez nos critiques pour comprendre pourquoi vous pouvez avoir confiance en nous.",
+      "second-title": "Nos partenariats pour un <0>avenir plus brillant!</0>",
+      "testimony1": "“En tant qu'éducatrice et mère d'une fille de 6 ans, je suis très heureuse d'avoir découvert les enfants de Revlan Pérou. Ils ont innové la manière d'apprendre une deuxième langue, en l'occurrence l'anglais, de manière dynamique, amusante et adaptée aux enfants et aux jeunes. Camilu est heureuse dans les spectacles parce qu'ils s'amusent et apprennent naturellement sans pression. Ce que j'ai aussi adoré, c'est la responsabilité sociale du projet, en consacrant une partie des bénéfices à une cause sociale. Je les recommande vivement !”",
+      "testimony1-footer": "La maman de Camila",
+      "testimony2": "“Je suis très heureuse et reconnaissante pour l'initiative innovante de Revlan dirigée par Sarah et Benja, qui enseignent l'anglais aux enfants grâce à des spectacles interactifs. En particulier, ma fille de 6 ans apprend non seulement la bonne prononciation de l'anglais, mais s'amuse aussi avec d'autres enfants venant de différentes parties du pays et du monde. Les activités regorgent de jeux dynamiques où les enfants prennent plaisir à apprendre une autre langue. Il n'y a pas d'enfants craintifs ou embarrassés ; on ne perçoit que des enfants heureux. C'est pourquoi je recommande REVLAN.”",
+      "testimony2-footer": "La maman de Catalina",
+      "testimony3": "“Je suis tellement heureuse de la méthode d'enseignement qu'ils ont avec les enfants. On m'a recommandé ces activités et je ne le regrette vraiment pas, bien au contraire. Mon fils est très heureux d'apprendre l'anglais tous les jours avec cette méthodologie amusante. Merci Benja et Sarah, je les recommande vivement !”",
+      "testimony3-footer": "La maman de Leandro"
+    },
+    "pricing": {
+      "section-title": "TARIFICATION",
+      "main-title": "<0>Fixez le prix de votre divertissement:</0> préparez-vous pour l’activité!",
+      "per-text": "par enfant",
+      "text": "Choisissez le forfait parfait pour rendre votre expérience inoubliable.",
+      "features-title": "Produits numériques",
+      "features": {
+        "1": "Itinéraire de voyage",
+        "2": "Poursuivez le Livre d'activités amusantes",
+        "3": "Passeport imprimable",
+        "4": "Certificat de fin d'études"
+      },
+      "subtitle": "Produits numériques",
+      "package1": {
+        "price": "<0>$7</0> <1>/par enfant</1>",
+        "title": "Touriste",
+        "type": "(Une activité unique)",
+        "main": "Un billet pour une seule activité"
+      },
+      "package2": {
+        "price": "<0>$7</0> <1>/par enfant</1>",
+        "title": "Voyageur",
+        "type": "(Demi-Tour)",
+        "main": "Forfait de 4 activités"
+      },
+      "package3": {
+        "price": "<0>$7</0> <1>/par enfant</1>",
+        "title": "Camp de voyage",
+        "type": "(Tour complet)",
+        "main": "Forfait de 8 activités + Produits numériques"
+      },
+      "footer-text": "Êtes-vous un institut, une organisation ou une école cherchant à proposer ce programme à votre groupe d'enfants?",
+      "footer-h1": "Contactez-nous pour obtenir <0>un forfait spécial </0>",
+      "footer-h2": "pour votre groupe et créer une expérience inoubliable"
+    },
+    "originalProgram": {
+      "title": "Notre <0> Programme Original</0>",
+      "subtitle1": "Philosophie",
+      "subtitle2": "Approche",
+      "subtitle3": "Curriculum",
+      "text1": "Notre philosophie chez REVLAN est enracinée dans la conviction que l'apprentissage des langues est le plus efficace lorsqu'il est combiné au divertissement. Nous visons à redéfinir l'éducation linguistique en créant une expérience d'apprentissage captivante et immersive.",
+      "text2": "Notre approche privilégie l'apprentissage expérientiel, où les enfants participent à des interactions authentiques et à des activités pour développer naturellement leurs compétences linguistiques. Nous mettons l'accent sur le développement de l'amour de l'apprentissage et de la curiosité pour le monde.",
+      "text3": "Le programme d'études de REVLAN est conçu pour permettre aux enfants d'explorer la langue et la culture à travers des expériences interactives et captivantes. Nous nous concentrons sur le développement des compétences linguistiques essentielles tout en favorisant la créativité, la curiosité et la confiance chez les enfants."
+    },
+    "booknow": {
+      "section": "RÉSERVEZ MAINTENANT",
+      "title": "<0>Réservez votre place dès maintenant</0>",
+      "subtitle": "es places se remplissent rapidement !",
+      "text": "Réservez dès maintenant ! Il y a un nombre limité de places disponibles et vous ne voulez pas manquer la chance d'économiser pour une activité.",
+      "cta": "Réservez maintenant pour une activité"
+    },
+    "contactUs": {
+      "title": "Contactez-nous",
+      "text": "Prenez contact avec notre méthodologie d'anglais et <0>explorez davantage l'edutainment avec Revlan.</0>",
+      "cta": "Contactez-nous dès aujourd'hui."
+    }
+  },
+  "footer": {
+    "title": "Revolution Languages",
+    "text": "Une Révolution dans l'Apprentissage des Langues pour les Enfants",
+    "privacy": "Politique de confidentialité",
+    "terms": "Termes et conditions"
+  },
+  "confirmation": {
+    "greeting": "tu es proche du Tour !",
+    "text": "Nous avons bien reçu vos informations. Bientôt, vous pourrez voyager virtuellement et apprendre l'anglais de manière amusante, facile et didactique.",
+    "cta": "Rentrer à la maison, c'est parti !"
+  },
+  "contactUs": {
+    "title": "Contactez-nous !",
+    "text": "Entrez en contact avec notre méthodologie d'anglais et explorez davantage l'univers de l'edutainment.",
+    "cta": "Contactez-nous dès aujourd'hui."
+  },
+  "errorPage": {
+    "title": "Apprenons de  <0>nos erreurs</0> et avançons.",
+    "subtitle": "<0>Erreur 404</0> - Oops ! Vous êtes tombé sur une page sans issue.",
+    "text": "Ne nous attardons pas sur nos erreurs, mais utilisons plutôt cette opportunité pour apprendre quelque chose de nouveau. Découvrez-en davantage sur REVLAN pour vous aider à franchir la prochaine étape de votre parcours en anglais.",
+    "cta": "Retournons chez nous !"
+  },
+  "form": {
+    "firstName": {
+      "label": "Prénom",
+      "placeholder": "entrez votre prénom",
+      "error": "Entrez votre prénom s'il vous plait"
+    },
+    "lastName": {
+      "label": "Nom ",
+      "placeholder": "entrez votre nom",
+      "error": "Veuillez entrer votre nom"
+    },
+    "email": {
+      "label": "Adresse e-mail",
+      "placeholder": "entrez votre adresse e-mail",
+      "error": "entrez votre adresse e-mail",
+      "valid": "Veuillez utiliser un email valide"
+    },
+    "phone": {
+      "label": "Numéro de téléphone",
+      "placeholder": "entrez votre numéro de téléphone",
+      "error": "entrez votre numéro de téléphone"
+    },
+    "message": {
+      "label": "Message",
+      "placeholder": "laissez-nous un message pour en savoir plus sur vous...",
+      "error": "Veuillez ajouter un message"
+    }
+  }
+}

@@ -10,6 +10,7 @@ import Footer2 from "@components/Footer2.astro";
 import ContactModal from "../components/ContactModal.svelte";
 import Portal from "@components/Portal.astro";
 import { Modal } from "accessible-astro-components";
+import { t } from "i18next";
 
 interface Props {
   title?: string | undefined;
@@ -19,26 +20,27 @@ interface Props {
 const { title, description } = Astro.props;
 ---
 
-<html lang="en">
+<html lang='en'>
   <head>
     <MainHead title={title} description={description} />
   </head>
   <body>
-    <div class="stack backgrounds">
+    <div class='stack backgrounds'>
       <Nav />
       <slot />
       <Footer2 />
       <Portal>
         <ContactModal client:load />
       </Portal>
-      <Modal triggerId="watch-trigger" title="watch video modal">
+      <Modal triggerId='watch-trigger' title='watch video modal'>
+        <input type='hidden' name='youtubevideo' value={t("site.video")} />
         <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/Mi0ClLqcgRQ"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          width='560'
+          height='315'
+          src=''
+          title='YouTube video player'
+          frameborder='0'
+          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
           allowfullscreen></iframe>
       </Modal>
 
@@ -72,6 +74,40 @@ const { title, description } = Astro.props;
             } else {
               header!.style.position = "static";
             }
+          });
+
+          // Select the modal and iframe elements
+          const modal = document.querySelector(".modal");
+          const iframe = modal.querySelector("iframe");
+          const originalSrc = iframe.src; // Store the original src to reset later
+          const hiddenVideoUrl = document.querySelector(
+            "input[name='youtubevideo']"
+          );
+
+          // Function to reset the iframe src
+          const resetIframeSrc = () => {
+            iframe.src = ""; // First, clear the src
+            iframe.src = originalSrc; // Then, reset it to the original source
+          };
+
+          // Create a MutationObserver to observe changes in the modal's class attribute
+          const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+              if (mutation.attributeName === "class") {
+                const classList = mutation.target.classList;
+                // If the modal does not have the 'show' class, it means the modal was closed
+                if (!classList.contains("show")) {
+                  resetIframeSrc(); // Reset the iframe src to stop the video
+                } else {
+                  iframe.src = hiddenVideoUrl;
+                }
+              }
+            });
+          });
+
+          // Start observing the modal for attribute changes
+          observer.observe(modal, {
+            attributes: true, // We're only interested in changes to attributes
           });
         });
       </script>
@@ -143,9 +179,11 @@ const { title, description } = Astro.props;
           background:
          /*header1*/ var(--bg-image-main-rainbow) top
             center/var(--bg-gradient-size) no-repeat;
-          background-blend-mode: /*noise*/ overlay,
+          background-blend-mode: /*noise*/
+            overlay,
             /*footer*/ var(--bg-blend-mode),
-            /*header1*/ var(--bg-svg-blend-mode), /*header2*/ normal,
+            /*header1*/ var(--bg-svg-blend-mode),
+            /*header2*/ normal,
             /*base*/ normal;
         }
         @media (forced-colors: active) {
