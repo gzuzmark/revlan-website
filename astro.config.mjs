@@ -10,5 +10,5 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [sitemap(), astroI18next(), svelte(), tailwind(), compress()]
+  integrations: [sitemap(), astroI18next(), svelte(), tailwind()]
 });
