@@ -10,5 +10,5 @@ import playformCompress from "@playform/compress";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [sitemap(), astroI18next(), svelte(), tailwind(), compress(), playformCompress()]
+  integrations: [sitemap(), astroI18next(), svelte(), tailwind(), playformCompress()]
 });
