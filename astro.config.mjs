@@ -6,9 +6,10 @@ import vercel from "@astrojs/vercel/serverless";
 import svelte from "@astrojs/svelte";
 import tailwind from "@astrojs/tailwind";
 
-import playformCompress from "@playform/compress";
+
+console.log(process.env.NODE_ENV === 'production');
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [sitemap(), astroI18next(), svelte(), tailwind(), playformCompress()]
+  integrations: [sitemap(), astroI18next(), svelte(), tailwind(), process.env.NODE_ENV === 'production' && (await import("@playform/compress")).default()].filter(Boolean)
 });

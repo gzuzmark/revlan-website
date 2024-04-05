@@ -1,11 +1,11 @@
 {
-  "name": "mechanical-motion",
+  "name": "revlan-landing",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "npx astro-i18next generate && astro build",
+    "build": "cross-env NODE_ENV=production npx astro-i18next generate && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },

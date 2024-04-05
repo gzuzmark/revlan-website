@@ -22,5 +22,5 @@ pnpm-debug.log*
 .vercel
 
 # i18n generated pages
-pages/es
-pages/fr
+src/pages/es
+src/pages/fr
