@@ -82,7 +82,7 @@ const { title, description } = Astro.props;
           const originalSrc = iframe.src; // Store the original src to reset later
           const hiddenVideoUrl = document.querySelector(
             "input[name='youtubevideo']"
-          );
+          ).value;
 
           // Function to reset the iframe src
           const resetIframeSrc = () => {
